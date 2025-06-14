@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Narrow"
   text: "A Modern Hugo Theme with Multiple Color Schemes"
-  tagline: Built with TailwindCSS 4
+  tagline: Built on TailwindCSS 4
   image:
     src: /logo.svg
     alt: Narrow
