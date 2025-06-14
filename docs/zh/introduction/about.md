@@ -22,8 +22,6 @@
 
 ## 致谢
 
-Hugo Narrow 主题使用了以下技术：
-
 - [Hugo](https://gohugo.io/) - 静态站点生成。
 - [Tailwind CSS](https://tailwindcss.com/) - CSS 框架。
 - [KaTeX](https://katex.org/) - 公式渲染。
@@ -32,6 +30,7 @@ Hugo Narrow 主题使用了以下技术：
 - [Daisyui](https://daisyui.com/) - 主题配色参考。
 - [Hexo theme icarus](https://github.com/ppoffice/hexo-theme-icarus) - 搜索功能参考。
 - [Hugo Theme Stack](https://stack.jimmycai.com/) - Bilibili 和 Tencent Video 短代码。
+- [Vercel](https://vercel.com/) - 示例站点。
 - [iconify](https://iconify.design/) - 图标库。
 - [Lightgallery](https://www.lightgalleryjs.com/) - 图库系统。
 - [Justified Gallery](https://miromannino.github.io/Justified-Gallery/) - Justified 布局。

@@ -2,7 +2,7 @@
 
 A clean and modern Hugo theme for personal blogs, built with Tailwind CSS 4.0, featuring multiple color schemes and user customization support.
 
-## Key Features
+## Features
 
 - Multiple Color Schemes
 - Custom Colors
@@ -20,9 +20,7 @@ A clean and modern Hugo theme for personal blogs, built with Tailwind CSS 4.0, f
 - Justified Layout Gallery
 
 
-## Thanks
-
-Hugo Narrow theme uses the following technologies:
+## Acknowledgments
 
 - [Hugo](https://gohugo.io/) - Static site generation
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
@@ -32,6 +30,7 @@ Hugo Narrow theme uses the following technologies:
 - [Daisyui](https://daisyui.com/) - Theme color reference
 - [Hexo theme icarus](https://github.com/ppoffice/hexo-theme-icarus) - Search functionality reference
 - [Hugo Theme Stack](https://stack.jimmycai.com/) - Bilibili and Tencent Video shortcodes
+- [Vercel](https://vercel.com) - Demo Site
 - [iconify](https://iconify.design/) - Icon library
 - [Lightgallery](https://www.lightgalleryjs.com/) - Gallery system
 - [Justified Gallery](https://miromannino.github.io/Justified-Gallery/) - Justified layout
