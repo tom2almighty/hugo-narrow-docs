@@ -29,7 +29,7 @@ git init
 ```bash
 git submodule add https://github.com/tom2almighty/hugo-narrow.git themes/hugo-narrow
 # 更新子模块
-git submodule update --init --recursive
+git submodule update --init --recursive --remote
 ```
 
 #### 方式二：直接下载

@@ -135,20 +135,42 @@ relatedPostsCount: 3
 ---
 ```
 
-## Gallery
+## Lightbox
 
 ```yaml
 ---
-gallery:
-  justified_gallery: true       # Justified Layout
-  modal: true                   # Gallery
-  responsive:
-    rowHeight: 180              # Image height
-    margins: 5                  # Image margin 
+# GLightbox
+lightbox:
+  enabled: true
+  loop: true
+  width: 80vw
+  height: 80vh
+  touchNavigation: true
+  draggable: true
+  zoomable: true
+  preload: true
+  descPosition: bottom
 ---
 ```
 
+## Justified Gallery
 
+```yaml
+---
+# Justified Gallery
+justified_gallery:
+  enabled: true
+  rowHeight: 300
+  gutter: 30
+  lastRow: center
+  transitionDuration: 0.3s
+  resizeDebounce: 100
+  rowHeightTolerance: 0.25
+  maxRowsCount: 999999
+  calculateItemsHeight: false
+---
+```
+Visit [Gallery](../configration/gallery).
 
 ## Full Front Matter
 
@@ -182,13 +204,29 @@ comments: true
 showLicense: true
 showRelated: true
 
-# gallery
-gallery:
-  justified_gallery: true
-  modal: true
-  responsive:
-    rowHeight: 180
-    margins: 5
+# lightbox
+lightbox:
+  enabled: true
+  loop: true
+  width: 80vw
+  height: 80vh
+  touchNavigation: true
+  draggable: true
+  zoomable: true
+  preload: true
+  descPosition: bottom
+
+# Justified Gallery
+justified_gallery:
+  enabled: true
+  rowHeight: 300
+  gutter: 30
+  lastRow: center
+  transitionDuration: 0.3s
+  resizeDebounce: 100
+  rowHeightTolerance: 0.25
+  maxRowsCount: 999999
+  calculateItemsHeight: false
 ---
 ```
 

@@ -1,11 +1,11 @@
 # 图库配置
 
-Hugo Narrow 支持图库和 Justified 布局图库，使用 [Lightgallery](https://www.lightgalleryjs.com/) 和 [Justified Gallery](https://miromannino.github.io/Justified-Gallery/)，你可以使用原生的 markdown 语法创建图库，无需短代码。
+Hugo Narrow 支持图片点击放大功能，使用 [GLightbox](https://github.com/biati-digital/glightbox) 库创建灯箱，同时支持 justified 布局和 Masonry 布局。justified 布局使用 [lickr-justified-gallery](https://github.com/nk-o/flickr-justified-gallery) 库实现，使用原生 markdown 输入，Masonry 布局使用 [Macy.js](https://github.com/bigbite/macy.js) 库实现，使用 shortcode 输入。
 
 > [!IMPORTANT]
-> 图库系统和 justified 布局会引入额外的 CSS 和 JS 资源，Justified Gallery 还依赖 jQuery。
+> 灯箱和两种布局会引入额外的 CSS 和 JS 资源。
 > 
-> 你可以单独控制图库系统和 Justified Gallery 的开关。
+> 你可以单独控制灯箱和布局的开关。
 
 ## 基础配置
 
@@ -13,16 +13,33 @@ Hugo Narrow 支持图库和 Justified 布局图库，使用 [Lightgallery](https
 
 ```yaml
 params:
-  gallery:
-    justified_gallery: true    # 启用对齐布局
-    modal: true                # 启用图库效果
-    responsive:
-      rowHeight: 180          # 行高
-      margins: 5              # 图片间距
+  # GLightbox 配置
+  lightbox:
+    enabled: true
+    loop: true
+    width: 80vw
+    height: 80vh
+    touchNavigation: true
+    draggable: true
+    zoomable: true
+    preload: true
+    descPosition: bottom
+
+  # Justified Gallery 配置 
+  justified_gallery:
+    enabled: true
+    rowHeight: 300
+    gutter: 30
+    lastRow: center
+    transitionDuration: 0.3s
+    resizeDebounce: 100
+    rowHeightTolerance: 0.25
+    maxRowsCount: 999999
+    calculateItemsHeight: false
 ```
 
 
-## 使用
+## Justified 布局图库
 
 直接使用 markdown 方式引入图像资源，一行一个资源链接，中间无空行的图像组视为同一个图库。
 下面的示例为两个图库，第一个图库包含两个图像资源，第二个图库包含三个图像资源。
@@ -36,3 +53,6 @@ params:
 ![](images/image05.jpg)
 ```
 
+## Masonry 布局图库
+
+使用短代码实现，详情请参考 [短代码](../posts/shortcodes#masonry)。

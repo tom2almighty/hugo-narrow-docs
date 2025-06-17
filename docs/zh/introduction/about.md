@@ -14,10 +14,11 @@
 - Markdown 增强
 - 代码块增强
 - 多语言支持
-- 数学公式支持
-- 流程图支持
-- 图库功能
-- Justified 布局图库
+- KaTeX 支持
+- Mermaid 支持
+- 灯箱支持
+- Justified 布局图库 - 原生 markdown 输入
+- Masonry 布局图库 - 短代码
 
 
 ## 致谢
@@ -32,8 +33,9 @@
 - [Hugo Theme Stack](https://stack.jimmycai.com/) - Bilibili 和 Tencent Video 短代码。
 - [Vercel](https://vercel.com/) - 示例站点。
 - [iconify](https://iconify.design/) - 图标库。
-- [Lightgallery](https://www.lightgalleryjs.com/) - 图库系统。
-- [Justified Gallery](https://miromannino.github.io/Justified-Gallery/) - Justified 布局。
+- [Glightbox](https://github.com/biati-digital/glightbox) - 灯箱库。
+- [flickr-justified-gallery](https://github.com/nk-o/flickr-justified-gallery) - Justified 布局库。
+- [Macy.js](https://github.com/bigbite/macy.js) - Masonry 布局库。
 - [Augment Code](https://www.augmentcode.com/) - 代码助手。
 
 

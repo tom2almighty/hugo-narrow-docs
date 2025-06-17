@@ -14,10 +14,11 @@ A clean and modern Hugo theme for personal blogs, built with Tailwind CSS 4.0, f
 - Enhanced Markdown
 - Enhanced Code Blocks
 - Multilingual Support
-- Math Equations Support
-- Flowchart Support
-- Gallery Feature
-- Justified Layout Gallery
+- Katex Support
+- Mermaid Support
+- Lightbox by GLightbox
+- Justified Gallery with markdown
+- Masonry Gallery with shortcode
 
 
 ## Acknowledgments
@@ -32,8 +33,9 @@ A clean and modern Hugo theme for personal blogs, built with Tailwind CSS 4.0, f
 - [Hugo Theme Stack](https://stack.jimmycai.com/) - Bilibili and Tencent Video shortcodes
 - [Vercel](https://vercel.com) - Demo Site
 - [iconify](https://iconify.design/) - Icon library
-- [Lightgallery](https://www.lightgalleryjs.com/) - Gallery system
-- [Justified Gallery](https://miromannino.github.io/Justified-Gallery/) - Justified layout
+- [Glightbox](https://github.com/biati-digital/glightbox) - Lightbox library.
+- [flickr-justified-gallery](https://github.com/nk-o/flickr-justified-gallery) - Justified image gallery.
+- [Macy.js](https://github.com/bigbite/macy.js) - Masonry layout library.
 - [Augment Code](https://www.augmentcode.com/) - Code assistant
 
 

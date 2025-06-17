@@ -94,6 +94,16 @@ https://v.qq.com/x/cover/aav44xv50k8sfjb/o01836xm9bv.html
 {{< tencent o01836xm9bv >}}
 ```
 
+### Masonry
+Create a masonry layout gallery by:
+
+```markdown
+{{< masonry columns=4 gutter=15 >}}
+![Image 1](image1.jpg)
+![Image 2](image2.jpg)
+{{< /masonry >}}
+```
+
 ## Custom Shortcodes
 
 Add your shortcode templates in the `~/layout/_shortcodes` directory. If using Tailwind CSS, you'll need to compile styles locally to apply them to the theme. See [Custom Styles](/configration/custom-style) for detailed instructions on local compilation.

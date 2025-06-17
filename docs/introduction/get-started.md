@@ -29,7 +29,7 @@ There are two ways to add the theme:
 ```bash
 git submodule add https://github.com/tom2almighty/hugo-narrow.git themes/hugo-narrow
 # Update submodules
-git submodule update --init --recursive
+git submodule update --init --recursive --remote
 ```
 
 #### Option 2: Direct Download

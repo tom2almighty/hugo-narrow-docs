@@ -94,6 +94,17 @@ https://v.qq.com/x/cover/aav44xv50k8sfjb/o01836xm9bv.html
 {{< tencent o01836xm9bv >}}
 ```
 
+### Masonry 布局图库
+
+瀑布流布局图库：
+
+```markdown
+{{< masonry columns=4 gutter=15 >}}
+![Image 1](image1.jpg)
+![Image 2](image2.jpg)
+{{< /masonry >}}
+```
+
 ## 自定义短代码
 
 在 `~/layout/_shortcodes` 目录下添加你的短代码模板，如果使用 Tailwind CSS，需要在本地编译样式应用到主题，本地编译详细方式见[自定义样式](/zh/configration/custom-style)

@@ -135,19 +135,42 @@ relatedPostsCount: 3
 ---
 ```
 
-## 图库
+## 灯箱
 
 ```yaml
 ---
-gallery:
-  justified_gallery: true    # Justified 布局
-  modal: true                   # 灯箱系统
-  responsive:
-    rowHeight: 180           # 图片行高
-    margins: 5                  # 图片间距  
+# GLightbox
+lightbox:
+  enabled: true
+  loop: true
+  width: 80vw
+  height: 80vh
+  touchNavigation: true
+  draggable: true
+  zoomable: true
+  preload: true
+  descPosition: bottom
 ---
 ```
 
+## Justified 布局图库
+
+```yaml
+---
+justified_gallery:
+  enabled: true
+  rowHeight: 300
+  gutter: 30
+  lastRow: center
+  transitionDuration: 0.3s
+  resizeDebounce: 100
+  rowHeightTolerance: 0.25
+  maxRowsCount: 999999
+  calculateItemsHeight: false
+---
+```
+
+访问 [图库功能](../configration/gallery)
 
 
 ## 完整的 Front Matter
@@ -182,13 +205,29 @@ comments: true
 showLicense: true
 showRelated: true
 
-# 图库配置
-gallery:
-  justified_gallery: true
-  modal: true
-  responsive:
-    rowHeight: 180
-    margins: 5
+# 灯箱
+lightbox:
+  enabled: true
+  loop: true
+  width: 80vw
+  height: 80vh
+  touchNavigation: true
+  draggable: true
+  zoomable: true
+  preload: true
+  descPosition: bottom
+
+# Justified 布局图库
+justified_gallery:
+  enabled: true
+  rowHeight: 300
+  gutter: 30
+  lastRow: center
+  transitionDuration: 0.3s
+  resizeDebounce: 100
+  rowHeightTolerance: 0.25
+  maxRowsCount: 999999
+  calculateItemsHeight: false
 ---
 ```
 
