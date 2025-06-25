@@ -5,6 +5,17 @@ aside: false
 
 # 更新日志
 
+## v1.1.1 (2025-06-25)
+### Bug 修复
+- 修复 masonry 短代码 ID 重复导致的样式失效问题。
+- 修复 glightbox 和 justified 参数设置不生效问题 。
+
+### 样式优化
+- 优化链接、脚注样式。
+- 添加 scrollbar 样式。
+- 添加主题配色，来自[tweakcn](https://tweakcn.com/)。
+
+
 ## v1.1.0 (2025-06-17)
 
 ### 重大变更

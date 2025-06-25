@@ -5,7 +5,17 @@ aside: false
 
 # Changelog
 
-## v1.1.0 (July 17, 2025)
+## v1.1.1(July 25, 2025)
+### Bug Fixes
+- Fixed masonry shortcode style failure issue caused by duplicate IDs
+- Fixed glightbox and Justified parameter settings not taking effect
+
+### Style Improvements
+- Optimized link and footnote styles
+- Added scrollbar styling
+- More color schemes from [tweakcn](https://tweakcn.com/)
+
+## v1.1.0 (June 17, 2025)
 
 ### Breaking Changes
 Gallery configuration structure has been updated. Please update your Hugo configuration, visit [Release Notes](https://github.com/tom2almighty/hugo-narrow/releases/tag/v1.1.0).

@@ -28,7 +28,8 @@ A clean and modern Hugo theme for personal blogs, built with Tailwind CSS 4.0, f
 - [KaTeX](https://katex.org/) - Math equation rendering
 - [Mermaid](https://mermaid.js.org/) - Chart library
 - [gumshoe](https://github.com/cferdinandi/gumshoe) - Scroll spying
-- [Daisyui](https://daisyui.com/) - Theme color reference
+- [Daisyui](https://daisyui.com/) - Color Scheme reference
+- [Tweakcn](https://tweakcn.com/) - Color Scheme reference
 - [Hexo theme icarus](https://github.com/ppoffice/hexo-theme-icarus) - Search functionality reference
 - [Hugo Theme Stack](https://stack.jimmycai.com/) - Bilibili and Tencent Video shortcodes
 - [Vercel](https://vercel.com) - Demo Site

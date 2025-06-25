@@ -29,6 +29,7 @@
 - [Mermaid](https://mermaid.js.org/) - Chart 库。
 - [gumshoe](https://github.com/cferdinandi/gumshoe) - 滚动监听。
 - [Daisyui](https://daisyui.com/) - 主题配色参考。
+- [Tweakcn](https://tweakcn.com/) - 主题配色参考。
 - [Hexo theme icarus](https://github.com/ppoffice/hexo-theme-icarus) - 搜索功能参考。
 - [Hugo Theme Stack](https://stack.jimmycai.com/) - Bilibili 和 Tencent Video 短代码。
 - [Vercel](https://vercel.com/) - 示例站点。
