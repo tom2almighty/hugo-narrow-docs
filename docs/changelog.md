@@ -5,7 +5,32 @@ aside: false
 
 # Changelog
 
-## v1.1.1(July 25, 2025)
+## v1.1.2(July 2, 2025)
+### Bug Fixes
+- Fixed frontmatter license params is not taking effect.
+
+### Style
+- Image display center.
+
+### Breaking Changes
+- license params add `author` and `show` params
+- delete `showLicense` params
+
+```diff
+params:
+  post:
+-   showLicense: true
+    license:
++     show: true
++     author: "Hugo Narrow"
+      name: "CC BY-NC-SA 4.0"
+      description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
+      url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      displayName: "CC BY-NC-SA 4.0"
+
+```
+
+## v1.1.1(June 25, 2025)
 ### Bug Fixes
 - Fixed masonry shortcode style failure issue caused by duplicate IDs
 - Fixed glightbox and Justified parameter settings not taking effect

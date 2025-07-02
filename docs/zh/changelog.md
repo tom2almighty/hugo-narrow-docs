@@ -5,6 +5,30 @@ aside: false
 
 # 更新日志
 
+## v1.1.2 (2025-07-02)
+### Bug 修复
+- 修复 Frontmatter 版权参数不生效
+
+### 样式优化
+- 图片居中显示
+
+### 重大变更
+- license 字段添加 `author` 和 `show` 参数
+- 删除 `showLicense` 参数
+
+```diff
+params:
+  post:
+-   showLicense: true
+    license:
++     show: true
++     author: "Hugo Narrow"
+      name: "CC BY-NC-SA 4.0"
+      description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
+      url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      displayName: "CC BY-NC-SA 4.0"
+```
+
 ## v1.1.1 (2025-06-25)
 ### Bug 修复
 - 修复 masonry 短代码 ID 重复导致的样式失效问题。

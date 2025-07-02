@@ -109,8 +109,9 @@ params:
     showRelated: true           # 相关文章展示
     relatedPostsCount: 3        # 相关文章卡片数量
 
-    showLicense: true           # 文章版权信息展示
     license:
+      show: true
+      author: Hugo Narrow
       name: "CC BY-NC-SA 4.0"
       description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
       url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
