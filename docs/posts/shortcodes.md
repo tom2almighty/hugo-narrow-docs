@@ -104,6 +104,33 @@ Create a masonry layout gallery by:
 {{< /masonry >}}
 ```
 
+### Link
+
+Link shortcode support three methods.
+
+1. Use paramaters.
+
+```markdown
+{{< link title="Google" description="The world largest search engine." url="https://google.com" icon="https://google.com/favicon.ico" >}}
+```
+
+2. Use links data paramater `ID/ref` of `data/links.yaml` files.
+
+```markdown
+{{< link id="github" >}}
+{{< link ref="github" >}}
+```
+
+3. Use links data paramater `group/category` of `data/links.yaml` files.
+
+```markdown
+{{< link group="social" >}}
+{{< link category="social" >}}
+```
+
+> [!NOTE]
+> `icon` paramater is not required, if you don't define the value, the partials will find the favicon file(.svg/.ico), if still find no avaliable icons, it will fallback to `link.svg` of assets folder.
+
 ## Custom Shortcodes
 
 Add your shortcode templates in the `~/layout/_shortcodes` directory. If using Tailwind CSS, you'll need to compile styles locally to apply them to the theme. See [Custom Styles](/configration/custom-style) for detailed instructions on local compilation.

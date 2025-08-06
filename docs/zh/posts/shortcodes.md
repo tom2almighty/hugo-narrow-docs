@@ -105,6 +105,33 @@ https://v.qq.com/x/cover/aav44xv50k8sfjb/o01836xm9bv.html
 {{< /masonry >}}
 ```
 
+### 链接
+
+链接卡片支持三种方式调用。
+
+1. 直接使用参数。
+
+```markdown
+{{< link title="Google" description="世界上最大的搜索引擎。" url="https://google.com" icon="https://google.com/favicon.ico" >}}
+```
+
+2. 使用 `data/links.yaml` 文件中 `id/ref` 参数。
+
+```markdown
+{{< link id="github" >}}
+{{< link ref="github" >}}
+```
+
+3. 使用 `data/links.yaml` 文件中 `group/category` 参数。
+
+```markdown
+{{< link group="social" >}}
+{{< link category="social" >}}
+```
+
+> [!NOTE]
+> `icon` 参数不是必须的, 如果未指定值, 模板会寻找链接的 favicon 文件(.svg/.ico), 如果仍未找到可用的值, 会回退到 assets目录下的 `link.svg` 文件.
+
 ## 自定义短代码
 
 在 `~/layout/_shortcodes` 目录下添加你的短代码模板，如果使用 Tailwind CSS，需要在本地编译样式应用到主题，本地编译详细方式见[自定义样式](/zh/configration/custom-style)
