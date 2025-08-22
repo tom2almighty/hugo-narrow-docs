@@ -49,13 +49,14 @@ You can also replace the corresponding highlight variable names with custom colo
 Configure in `hugo.yaml`:
 
 ```yaml
-codeblock:
-  collapse:
-    enabled: true
-    defaultState: expanded  # Default collapse behavior: expanded, collapsed
-    autoCollapseLines: 30   # Collapse when exceeding specified lines
-    autoCollapseHeight: 400  # Collapse when exceeding specified height
-    collapsedHeight: 120    # Height when collapsed
+params:
+  codeblock:
+    collapse:
+      enabled: true
+      defaultState: expanded  # Default collapse behavior: expanded, collapsed
+      autoCollapseLines: 30   # Collapse when exceeding specified lines
+      autoCollapseHeight: 400  # Collapse when exceeding specified height
+      collapsedHeight: 120    # Height when collapsed
 ```
 
 

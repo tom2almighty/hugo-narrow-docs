@@ -4,6 +4,17 @@ aside: false
 ---
 
 # Changelog
+## v1.1.4(August 22, 2025)
+### Bug Fixes
+- fix post card summary index order.
+- fix reading progress and codeblock configuration.
+
+### New Features
+- add language switch mode, new params `params: languageSwitchMode`, support `dropdown` and `cycle` options.
+
+### Style
+- add license information at footer.
+
 
 ## v1.1.3(August 6, 2025)
 ### Bug Fixes

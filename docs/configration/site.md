@@ -67,6 +67,7 @@ params:
   showThemeSwitch: true      # Whether to show theme color switch button
   showDarkModeSwitch: true   # Whether to show dark mode switch button
   showLanguageSwitch: true   # Whether to show language switch button
+  languageSwitchMode: dropdown # Language switch mode: "dropdown" (show panel) or "cycle" (direct cycle)
 ```
 
 ## Homepage
@@ -135,11 +136,12 @@ outputFormats:
 ## Reading Progress
 
 ```yaml
-readingProgress:
-  enabled: true
-  height: 3
-  showOnHomepage: false
-  smoothScroll: true
-  hideOnComplete: false
+params:
+  readingProgress:
+    enabled: true
+    height: 3
+    showOnHomepage: false
+    smoothScroll: true
+    hideOnComplete: false
 ```
 

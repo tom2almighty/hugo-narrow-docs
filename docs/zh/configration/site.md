@@ -67,6 +67,7 @@ params:
   showThemeSwitch: true      # 是否显示主题配色切换按钮
   showDarkModeSwitch: true   # 是否显示暗色模式切换按钮
   showLanguageSwitch: true   # 是否显示语言切换按钮
+  languageSwitchMode: dropdown # 语言切换模式: "dropdown" (显示菜单) or "cycle" (点击直接切换)
 ```
 
 ## 首页信息
@@ -135,11 +136,12 @@ outputFormats:
 ## 阅读进度
 
 ```yaml
-readingProgress:
-  enabled: true
-  height: 3
-  showOnHomepage: false
-  smoothScroll: true
-  hideOnComplete: false
+params:
+  readingProgress:
+    enabled: true
+    height: 3
+    showOnHomepage: false
+    smoothScroll: true
+    hideOnComplete: false
 ```
 

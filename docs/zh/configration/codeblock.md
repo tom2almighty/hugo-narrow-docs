@@ -49,13 +49,14 @@ hugo gen chromastyles --style=github-dark > ./github-dark.css
 在 `hugo.yaml`中配置：
 
 ```yaml
-codeblock:
-  collapse:
-    enabled: true
-    defaultState: expanded  # 默认折叠行为：expanded, collapsed
-    autoCollapseLines: 30   # 超出指定行数折叠
-    autoCollapseHeight: 400  # 超出指定高度折叠
-    collapsedHeight: 120    # 折叠后的高度
+params:
+  codeblock:
+    collapse:
+      enabled: true
+      defaultState: expanded  # 默认折叠行为：expanded, collapsed
+      autoCollapseLines: 30   # 超出指定行数折叠
+      autoCollapseHeight: 400  # 超出指定高度折叠
+      collapsedHeight: 120    # 折叠后的高度
 ```
 
 
