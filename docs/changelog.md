@@ -4,6 +4,21 @@ aside: false
 ---
 
 # Changelog
+
+## v1.1.5(September 5, 2025)
+### New Features
+- open external link in new tab
+- custom js support
+- add 404 template
+- add dock display mode
+```diff
+params
++  dock: float # Options: "scroll" (show on scroll up), "always" (always visible), "float" (floating)
+```
+### Style
+- change subscript and superscript color
+- change blockquote bottom padding
+
 ## v1.1.4(August 22, 2025)
 ### Bug Fixes
 - fix post card summary index order.

@@ -68,6 +68,9 @@ params:
   showDarkModeSwitch: true   # 是否显示暗色模式切换按钮
   showLanguageSwitch: true   # 是否显示语言切换按钮
   languageSwitchMode: dropdown # 语言切换模式: "dropdown" (显示菜单) or "cycle" (点击直接切换)
+  # Dock 显示模式
+  # Options: "scroll" (滚动显示), "always" (常驻显示), "float" (悬浮显示)
+  dock: "float"
 ```
 
 ## 首页信息

@@ -45,8 +45,7 @@ export default defineConfig({
               { text: '代码块', link: '/zh/configration/codeblock' },
               { text: '统计功能', link: '/zh/configration/analytics' },
               { text: '评论功能', link: '/zh/configration/comments' },
-              { text: '图库功能', link: '/zh/configration/gallery' },
-              { text: '自定义样式', link: '/zh/configration/custom-style' }
+              { text: '图库功能', link: '/zh/configration/gallery' }
             ]
           }
         ]
@@ -99,8 +98,7 @@ export default defineConfig({
           { text: 'Code Blocks', link: '/configration/codeblock' },
           { text: 'Analytics', link: '/configration/analytics' },
           { text: 'Comments', link: '/configration/comments' },
-          { text: 'Gallery', link: '/configration/gallery' },
-          { text: 'Custom Styles', link: '/configration/custom-style' }
+          { text: 'Gallery', link: '/configration/gallery' }
         ]
       }
     ],

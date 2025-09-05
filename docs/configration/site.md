@@ -68,6 +68,9 @@ params:
   showDarkModeSwitch: true   # Whether to show dark mode switch button
   showLanguageSwitch: true   # Whether to show language switch button
   languageSwitchMode: dropdown # Language switch mode: "dropdown" (show panel) or "cycle" (direct cycle)
+  # Dock display mode
+  # Options: "scroll" (show on scroll up), "always" (always visible), "float" (floating button)
+  dock: "float"
 ```
 
 ## Homepage
