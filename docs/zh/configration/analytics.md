@@ -40,7 +40,7 @@ params:
   analytics:
     clarity:
       enabled: true
-      analytics: "your-clarity-analytics-id"
+      id: "your-clarity-analytics-id"
 ```
 
 
