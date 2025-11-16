@@ -60,7 +60,9 @@ params:
 ```
 
 ## 导航栏设置
+
 支持 `true/false`
+
 ```yaml
 params:
   stickyHeader: true  # 粘性导航栏
@@ -73,8 +75,16 @@ params:
   dock: "float"
 ```
 
-## 首页信息
+## 首页配置
+
 ### 作者信息卡片
+
+作者信息支持两种配置方式，在 Hugo 站点配置中配置和首页 `_index.md` 文件中配置，配置的说明如下：
+
+- `_index.md` 文件的配置会覆盖站点配置文件的参数
+- `_index.md` 文件的配置支持 i18n，如 `_index.md` 和 `_index.zh.md`
+- `_index.md` 文件的配置**不支持合并参数**，即如果配置则需要填写全部参数
+
 ```yaml
 params:
   author:
@@ -95,6 +105,21 @@ params:
 ```
 
 `icon` 放置在 `~/assets/icons` 目录下，放入需要的 `SVG` 文件，以 `icon: SVG 文件名` 方式使用。
+
+### 首页自定义内容
+
+在 作者信息和最近文章之间支持添加自定义内容模板，通过参数配置是否引入自定义模板及引入的模板名称。
+
+模板应放置在 `~/layouts/_partials/content/` 文件夹。
+
+```yaml
+params:
+  home_custom:
+    enabled: true
+    files:
+      - custom_1.html
+      - custom_2.html
+```
 
 ### 最近文章
 
@@ -147,4 +172,3 @@ params:
     smoothScroll: true
     hideOnComplete: false
 ```
-

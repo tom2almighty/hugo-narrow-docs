@@ -60,7 +60,9 @@ params:
 ```
 
 ## Navigation Bar
+
 Supports `true/false`
+
 ```yaml
 params:
   stickyHeader: true  # Sticky navigation bar
@@ -74,7 +76,9 @@ params:
 ```
 
 ## Homepage
+
 ### Author Info Card
+
 ```yaml
 params:
   author:
@@ -95,6 +99,21 @@ params:
 ```
 
 Place `icon` files in the `~/assets/icons` directory. Add the required `SVG` files and use them with `icon: SVG filename`.
+
+### Custom Section
+
+Custom content templates are supported between the author info and recent posts sections. You can configure whether to include custom templates and specify template names through parameters.
+
+Templates should be placed in the `~/layouts/_partials/content/` folder.
+
+```yaml
+params:
+  home_custom:
+    enabled: true
+    files:
+      - custom_1.html
+      - custom_2.html
+```
 
 ### Recent Posts
 
@@ -147,4 +166,3 @@ params:
     smoothScroll: true
     hideOnComplete: false
 ```
-

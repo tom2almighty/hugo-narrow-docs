@@ -13,8 +13,8 @@
 如果你希望保存你的修改到 GitHub 仓库，你可以 fork 主题，然后将 `git submodule` 添加的子模块替换成你的仓库地址。
 
 ### 下载主题方式
-当你直接下载主题文件到你站点目录时，你可以直接修改主题文件，缺陷是每次更新需要手动对比主题变化，升级困难。
 
+当你直接下载主题文件到你站点目录时，你可以直接修改主题文件，缺陷是每次更新需要手动对比主题变化，升级困难。
 
 ## 自定义样式
 
@@ -26,9 +26,11 @@
     ```javascript
     pnpm add -D tailwindcss @tailwindcss/cli @tailwindcss/typography
     ```
+
    在 `~/assets/css/custom.css` 中或其他样式文件中修改或添加自定义样式。
 
    完成后需要编译样式文件：
+
     ```javascript
     npx tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled.css
     ```
@@ -36,3 +38,7 @@
 ## 自定义 JavaScript
 
 在站点 `~/assets/js/custom/` 目录下创建 js 自定义文件即可自动引入。
+
+## 首页自定义内容
+
+主题支持在首页作者信息和最近文章之间添加自定义模板，详细内容请访问 [首页自定义内容](../configration/site#首页自定义内容)。

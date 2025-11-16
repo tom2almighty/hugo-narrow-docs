@@ -40,6 +40,7 @@ export default defineConfig({
             items: [
               { text: '站点配置', link: '/zh/configration/site' },
               { text: '导航菜单', link: '/zh/configration/menu' },
+              { text: '底部导航', link: '/zh/configration/dock' },
               { text: '主题配色', link: '/zh/configration/color-scheme' },
               { text: '多语言', link: '/zh/configration/i18n' },
               { text: '代码块', link: '/zh/configration/codeblock' },
@@ -93,6 +94,7 @@ export default defineConfig({
         items: [
           { text: 'Site Config', link: '/configration/site' },
           { text: 'Navigation Menu', link: '/configration/menu' },
+          { text: 'Dock', link: '/configration/dock' },
           { text: 'Color Schemes', link: '/configration/color-scheme' },
           { text: 'I18n', link: '/configration/i18n' },
           { text: 'Code Blocks', link: '/configration/codeblock' },
