@@ -6,38 +6,70 @@ aside: false
 # Changelog
 
 ## v1.1.5(September 5, 2025)
+
+## v1.1.6(November 16, 2025)
+
 ### New Features
+
+- Homepage author information now supports i18n translation
+
+- Added custom content template between homepage author information and recent posts
+
+```diff
++ params:
++   home_custom:
++   enabled: true
++     files:
++       - custom_1.html
++       - custom_2.html
+```
+
+### Bug Fixes
+
+- Fixed incorrect parameter name for clarity in the site configuration file
+
+### New Features
+
 - open external link in new tab
 - custom js support
 - add 404 template
 - add dock display mode
+
 ```diff
 params
 +  dock: float # Options: "scroll" (show on scroll up), "always" (always visible), "float" (floating)
 ```
+
 ### Style
+
 - change subscript and superscript color
 - change blockquote bottom padding
 
 ## v1.1.4(August 22, 2025)
+
 ### Bug Fixes
+
 - fix post card summary index order.
 - fix reading progress and codeblock configuration.
 
 ### New Features
+
 - add language switch mode, new params `params: languageSwitchMode`, support `dropdown` and `cycle` options.
 
 ### Style
+
 - add license information at footer.
 
-
 ## v1.1.3(August 6, 2025)
+
 ### Bug Fixes
+
 - Post cover placeholder not effect.
 - regular page comments doesn't display.
 - License url too long to page overflow.
 
 ### Style
+
 - Codeblock plaintext style.
 - Github Alert style.
 - Post card style.
@@ -46,21 +78,27 @@ params
 - Post navigation height.
 
 ### Feature
+
 - New `About` partials.
 - New `link` shortcode.
 - Improve search and TOC user experience.
 
 ### Refactor
+
 - Refactor CSS framework, delete `@tailwindcss/typography` dependency.
 
 ## v1.1.2(July 2, 2025)
+
 ### Bug Fixes
+
 - Fixed frontmatter license params is not taking effect.
 
 ### Style
+
 - Image display center.
 
 ### Breaking Changes
+
 - license params add `author` and `show` params
 - delete `showLicense` params
 
@@ -79,11 +117,14 @@ params:
 ```
 
 ## v1.1.1(June 25, 2025)
+
 ### Bug Fixes
+
 - Fixed masonry shortcode style failure issue caused by duplicate IDs
 - Fixed glightbox and Justified parameter settings not taking effect
 
 ### Style Improvements
+
 - Optimized link and footnote styles
 - Added scrollbar styling
 - More color schemes from [tweakcn](https://tweakcn.com/)
@@ -91,25 +132,33 @@ params:
 ## v1.1.0 (June 17, 2025)
 
 ### Breaking Changes
+
 Gallery configuration structure has been updated. Please update your Hugo configuration, visit [Release Notes](https://github.com/tom2almighty/hugo-narrow/releases/tag/v1.1.0).
+
 ### New Features
+
 - Masonry Gallery Shortcode: Added support for masonry/waterfall layout with the new `{\{< masonry >}}` shortcode
 
 ### Improvements
+
 - New Lightbox System: Migrated from lightGallery to GLightbox for improved performance and modern user experience
 - Enhanced Justified Layout: Replaced jQuery-based justified gallery with flickr-justified-gallery for better native JavaScript support
 - Removed jQuery Dependency: Complete elimination of jQuery from the gallery system, resulting in faster loading times and reduced bundle size
 
 ### Bug Fixes
+
 - Fixed i18n translation issues in post-meta component
 - Resolved analytics template inclusion problem
 
 ## v1.0.0 (June 14, 2025)
+
 ### New Features
+
 - Integrated Hugo's built-in SEO templates
 - Implemented gallery and justified gallery support
 - Added customizable placeholder images for article covers
 
 ### Improvements
+
 - Removed redundant metadata fields
 - Fixed article navigation descriptions in post pages
