@@ -38,7 +38,6 @@ menus:
         icon: archive
 ```
 
-
 ## 页脚菜单配置
 
 ```yaml
@@ -110,6 +109,7 @@ menus:
 
 1. **内置图标**
 主题在 `assets/icons/` 目录下提供了常用图标：
+
 - posts
 - categories
 - tags
@@ -123,8 +123,10 @@ menus:
 等
 
 2. **自定义图标**
-   
-下载你的 SVG 图标到 `assets/icons/` 目录
+
+下载你的 SVG 图标到 `assets/icons/`目录。
+
+你可以在 [Iconify Design](https://icon-sets.iconify.design/) 找到许多优秀的图标。
 
 使用：`icon: SVG 文件名`
 
@@ -148,6 +150,7 @@ menus:
 ```
 
 对应的 i18n 文件（例如 `i18n/zh-cn.yaml`）：
+
 ```yaml
 nav:
   posts: "文章"
@@ -157,4 +160,3 @@ nav:
 ```
 
 name 值可以为任意字符串：`name: 任意字符串`。
-

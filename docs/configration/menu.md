@@ -8,7 +8,7 @@ Hugo Narrow supports the following types of menus:
 2. Footer Menu (`footer`)
 3. Social Links Menu (`social`)
 
-## Main Menu 
+## Main Menu
 
 ```yaml
 menus:
@@ -37,7 +37,6 @@ menus:
       params:
         icon: archive
 ```
-
 
 ## Footer Menu
 
@@ -110,6 +109,7 @@ Each menu item supports the following parameters:
 
 1. **Build-in Icons**
 Hugo Narrow support common icons at `assets/icons/`:
+
 - posts
 - categories
 - tags
@@ -123,8 +123,9 @@ Hugo Narrow support common icons at `assets/icons/`:
 - etc.
 
 2. **Custom Icons**
-   
-Download you icons with SVG format at `assets/icons/`.
+
+
+Download you icons with SVG format at `assets/icons/`, You can find a lot awesome icon at [Iconify Design](https://icon-sets.iconify.design/).
 
 Use: `icon: SVG filename`
 
@@ -148,6 +149,7 @@ menus:
 ```
 
 i18n file(eg: `i18n/zh-cn.yaml`)
+
 ```yaml
 nav:
   posts: "文章"
@@ -157,4 +159,3 @@ nav:
 ```
 
 You can set the name value as any string: `name: String`.
-
