@@ -1,0 +1,39 @@
+---
+title: Posts
+weight: 47
+date: 2026-02-20
+categories: ["Features"]
+tags: ["posts"]
+series: ["Features"]
+series_order: 47
+---
+
+Hugo Narrow supports configure the license of posts and the related posts.
+
+> [!TIP]
+> The parameters of license and related posts could cover by posts frontmatter. **DO NOT** add `post`.
+
+```yaml {filename="params.yaml"}
+post:
+  showRelated: true
+  relatedPostsCount: 3
+  license:
+    show: true
+    author: "Hugo Narrow"
+    name: "CC BY-NC-SA 4.0"
+    description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
+    url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    displayName: "CC BY-NC-SA 4.0"
+```
+
+```yaml {filename="first-post.md"}
+showRelated: false
+relatedPostsCount: 5
+license:
+  show: true
+  author: "Hugo Narrow"
+  name: "CC BY-NC-SA 4.0"
+  description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
+  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  displayName: "CC BY-NC-SA 4.0"
+```

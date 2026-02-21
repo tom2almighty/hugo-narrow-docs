@@ -1,0 +1,136 @@
+---
+title: 评论
+weight: 48
+date: 2026-02-20
+categories: ["特色配置"]
+tags: ["评论"]
+series: ["特色配置"]
+series_order: 48
+---
+
+Hugo Narrow 支持多种评论系统：
+
+- [artalk](https://artalk.js.org/)
+- [disqus](https://disqus.com/)
+- [giscus](https://giscus.app/)
+- [twikoo](https://twikoo.js.org/)
+- [utterances](https://utteranc.es/)
+- [waline](https://waline.js.org/)
+
+> [!TIP]
+> 评论参数可在文章 frontmatter 覆盖设置。
+>
+> ```yaml {filename="first-post.md"}
+> comments:
+>   enabled: true
+>   system: "giscus"
+> ```
+
+```yaml {filename="params.yaml"}
+comments:
+  enabled: false
+  system: "giscus"
+  giscus:
+    repo: "tom2almighty/hugo-narrow-giscus"
+    repoId: ""
+    category: "General"
+    categoryId: ""
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "en"
+  disqus:
+    shortname: ""
+  utterances:
+    repo: ""
+    issueTerm: "pathname"
+    label: "comment"
+    theme: "preferred-color-scheme"
+  waline:
+    serverURL: ""
+    lang: "zh-CN"
+  artalk:
+    server: ""
+    site: ""
+    locale: "zh-CN" # String|Object|"auto"
+    darkMode: "auto"
+    gravatar:
+      mirror: "https://cravatar.cn/avatar/"
+  twikoo:
+    envId: ""
+    region: "ap-shanghai"
+    path: ""
+    lang: "zh-CN"
+```
+
+---
+
+title: 评论
+weight: 58
+sidebar:
+open: true
+prev: /docs/features/posts
+next: /docs/features/analytics
+
+---
+
+Hugo Narrow 支持多种评论系统：
+
+- [artalk](https://artalk.js.org/)
+- [disqus](https://disqus.com/)
+- [giscus](https://giscus.app/)
+- [twikoo](https://twikoo.js.org/)
+- [utterances](https://utteranc.es/)
+- [waline](https://waline.js.org/)
+
+> [!TIP]
+> 评论参数可在文章 frontmatter 覆盖设置。
+>
+> ```yaml {filename="first-post.md"}
+> comments:
+>   enabled: true
+>   system: "giscus"
+> ```
+
+```yaml {filename="params.yaml"}
+comments:
+  enabled: false
+  system: "giscus"
+  giscus:
+    repo: "tom2almighty/hugo-narrow-giscus"
+    repoId: ""
+    category: "General"
+    categoryId: ""
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "en"
+  disqus:
+    shortname: ""
+  utterances:
+    repo: ""
+    issueTerm: "pathname"
+    label: "comment"
+    theme: "preferred-color-scheme"
+  waline:
+    serverURL: ""
+    lang: "zh-CN"
+  artalk:
+    server: ""
+    site: ""
+    locale: "zh-CN" # String|Object|"auto"
+    darkMode: "auto"
+    gravatar:
+      mirror: "https://cravatar.cn/avatar/"
+  twikoo:
+    envId: ""
+    region: "ap-shanghai"
+    path: ""
+    lang: "zh-CN"
+```
