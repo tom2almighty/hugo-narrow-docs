@@ -85,11 +85,6 @@ post:
 ```yaml
 cover: ""
 featured: false
-github: ""
-demo: ""
-website: ""
-tech_stack:
-  - Technology 1
-  - Technology 2
+url: "www.example.com"
 status: "completed" # Options: completed, in_progress, planning
 ```
