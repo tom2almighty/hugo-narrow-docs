@@ -6,6 +6,19 @@ layout: "timeline"
 
 # Changelog
 
+## v1.3.2 - 2026-03-10
+
+### Bug Fixes
+
+- Fix project meta error.
+- Fix date issue caused by translates.
+- Tabe add base styles.
+
+### New Features
+
+- Add submenu for navbar.
+- Add anchor for headings.
+
 ## v1.3.1 - 2026-02-21
 
 ### Refactor
