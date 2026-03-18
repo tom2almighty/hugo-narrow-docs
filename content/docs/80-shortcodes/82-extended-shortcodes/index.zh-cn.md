@@ -122,6 +122,44 @@ tool:
 - `size`: `xs`, `sm`, `md`, `lg`, `xl`, `2xl` (默认：`md`)。
 - `class`: 自定义类名，可以用来更改颜色。
 
+## 标签页
+
+```markdown
+{/{< tabs >}}
+{/{< tab label="" >}}
+{/{< /tab >}}
+
+{/{ /tabs >}}
+```
+
+
+
+{{< tabs >}}
+{{< tab label="概览" >}}
+这个面板里可以放普通段落、`npm run dev` 这类行内代码，以及强调文本。
+
+- 公共说明
+- 初始化清单
+- 任意 Markdown 块
+{{< /tab >}}
+{{< tab label="代码" >}}
+```javascript {filename=fetch-user.js}
+async function fetchUser(id) {
+  const response = await fetch(`/api/users/${id}`);
+  if (!response.ok) throw new Error("User not found");
+  return response.json();
+}
+```
+{{< /tab >}}
+{{< tab label="结果" >}}
+> `tabs` 短代码本身不绑定代码块。
+>
+> 每个面板都可以混合段落、代码块、列表、引用或图片。
+{{< /tab >}}
+{{< /tabs >}}
+
+
+
 ## 自定义短代码
 
 在 `~/layout/_shortcodes` 目录下添加短代码模板，如果使用 `Tailwind CSS`，需要在本地编译样式应用到主题。

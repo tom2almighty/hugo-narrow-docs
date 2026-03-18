@@ -122,6 +122,38 @@ Display SVG icons from the `~/assets/icons/` directory:
 - `size`: `xs`, `sm`, `md`, `lg`, `xl`, `2xl` (default: `md`)
 - `class`: Custom CSS class, which can be used to change colors
 
+## Tabs
+
+Use the `tabs` and `tab` shortcodes to switch between arbitrary Markdown content.
+
+```markdown
+
+{{< tabs >}}
+{{< tab label="Overview" >}}
+This panel can contain normal paragraphs, inline code like `npm run dev`, and emphasis.
+
+- Shared notes
+- Setup checklist
+- Any Markdown block
+{{< /tab >}}
+{{< tab label="Code" >}}
+```javascript {filename=fetch-user.js}
+async function fetchUser(id) {
+  const response = await fetch(`/api/users/${id}`);
+  if (!response.ok) throw new Error("User not found");
+  return response.json();
+}
+```
+
+{{< /tab >}}
+{{< tab label="Result" >}}
+> The tab shortcode is content-agnostic.
+>
+> You can mix prose, code blocks, lists, quotes, or images in each panel.
+{{< /tab >}}
+{{< /tabs >}}
+```
+
 ## Custom shortcodes
 
 Add your shortcode templates in the `~/layout/_shortcodes` directory. If using Tailwind CSS, you'll need to compile styles locally to apply them to the theme.
