@@ -16,6 +16,7 @@ Hugo Narrow supports kinds of comments:
 - [twikoo](https://twikoo.js.org/)
 - [utterances](https://utteranc.es/)
 - [waline](https://waline.js.org/)
+- [Comentario](https://comentario.app/)
 
 > [!TIP]
 > The parameter of comments can be coverd by posts frontmatter.
@@ -64,4 +65,15 @@ comments:
     region: "ap-shanghai"
     path: ""
     lang: "zh-CN"
+  comentario:
+    server: ""
+    lang: "zh-CN"
+    theme: "" # light, dark, or empty to follow browser preference
+    domainId: ""
+    cssOverride: ""
+    liveUpdate: true
+    maxLevel: 10
+    noFonts: false
+    autoInit: true
+    autoNonInteractiveSso: false
 ```
