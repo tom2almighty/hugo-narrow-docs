@@ -43,7 +43,7 @@ jobs:
           extended: true
 
       - name: Download Hugo modules
-        run: hugo mod download
+        run: hugo mod get -u
 
       - name: Build site
         run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
