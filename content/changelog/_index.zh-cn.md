@@ -6,6 +6,67 @@ layout: "timeline"
 
 # 更新日志
 
+## v1.3.11 - 2025-05-24
+
+### 新特性
+
+- 添加简历模板 [@svenvg93](https://github.com/svenvg93)
+- 灯箱图片描述移动到底部中间区域 [@svenvg93](https://github.com/svenvg93)
+
+## v1.3.10 - 2025-05-05
+
+### 问题修复
+
+- 更新时间和日期格式化模板，避免上游错误
+
+### 流程更新
+
+- 更新 Hugo 最低版本到 0.158.0
+
+## v1.3.9 - 2026-05-05
+
+### 新特性
+
+- 迁移旧的语言参数
+
+## v1.3.8 - 2026-05-03
+
+### 新特性
+
+- 添加日期格式化参数
+- 更新 Hugo 最低版本到 0.156.0
+
+## v1.3.7 - 2026-04-27
+
+### 新特性
+
+- 添加系列分类法列表布局 [@svenvg93](https://github.com/svenvg93)
+
+## v1.3.6 - 2026-03-27
+
+### 重要变更
+
+此版本使用自实现灯箱替换原来的 PhotoSwipe，参考配置如下：
+
+```diff
+  lightbox:
+    enabled: true
+-   bgOpacity: 0.8
+-   showHideAnimationType: zoom
+-   showAnimationDuration: 333
+-   hideAnimationDuration: 333
+```
+
+## v1.3.5 - 2026-03-18
+
+### 重构
+
+- 重构 i18n 翻译
+
+### 新特性
+
+- 新增短代码 `tabs`
+
 ## v1.3.2 - 2026-3-10
 
 ### Bug 修复

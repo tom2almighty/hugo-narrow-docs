@@ -6,6 +6,67 @@ layout: "timeline"
 
 # Changelog
 
+## v1.3.11 - 2025-05-24
+
+### New Features
+
+- add resume page layout by [@svenvg93](https://github.com/svenvg93)
+- move lightbox caption below image by [@svenvg93](https://github.com/svenvg93)
+
+## v1.3.10 - 2025-05-05
+
+### Fix Bugs
+
+- update time and date format partial, avoide upstream bug
+
+### Chore
+
+- update hugo version to 0.158.0
+
+## v1.3.9 - 2026-05-05
+
+### New Features
+
+- migrate deprecated language params to new
+
+## v1.3.8 - 2026-05-03
+
+### New Features
+
+- add date format partial
+- update hugo version to 0.156.0
+
+## v1.3.7 - 2026-04-27
+
+### New Features
+
+- render series taxonomy page as post-style cards by [@svenvg93](https://github.com/svenvg93)
+
+## v1.3.6 - 2026-03-27
+
+### Breaking Changes
+
+This version replace PhotoSwipe lightbox with custom implementation, the config sample:
+
+```diff
+  lightbox:
+    enabled: true
+-   bgOpacity: 0.8
+-   showHideAnimationType: zoom
+-   showAnimationDuration: 333
+-   hideAnimationDuration: 333
+```
+
+## v1.3.5 - 2026-03-18
+
+### Refactor
+
+- Refactor i18n, reduce translation keys.
+
+### New Features
+
+- New shortcodes tabs.
+
 ## v1.3.2 - 2026-03-10
 
 ### Bug Fixes
