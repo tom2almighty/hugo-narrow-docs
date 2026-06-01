@@ -7,7 +7,7 @@ export const shared: UserConfig = {
 
   // GitHub Pages *project* site is served from /<repo>/.
   // Using a custom domain or a user/org page instead? Change this to '/'.
-  base: '/',
+  base: '/hugo-narrow-docs',
 
   cleanUrls: true,
   lastUpdated: true,
