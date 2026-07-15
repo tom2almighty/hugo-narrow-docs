@@ -2,7 +2,7 @@ import type { DefaultTheme, LocaleSpecificConfig } from 'vitepress'
 
 const nav: DefaultTheme.NavItem[] = [
   { text: 'Demo', link: 'https://tom2almighty.github.io/hugo-narrow' },
-  { text: 'Changelog', link: '/en/changelog' },
+  { text: 'Changelog', link: '/zh/changelog' },
 ]
 
 // Sidebar key '/en/' matches the route prefix of the English pages, which live

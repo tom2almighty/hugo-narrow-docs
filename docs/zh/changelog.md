@@ -2,6 +2,21 @@
 title: "更新日志"
 ---
 
+## v1.3.15 - 2026-07-12
+
+- feat: 导航栏添加页面宽度调整功能
+
+## v1.3.14 - 2026-07-11
+
+- chore: 图库布局更新
+- chore: 许可协议变更为 GNU General Public License V3
+- fix: 统一模板行为，文件未设置日期时不显示 Hugo 默认日期输出
+
+## v1.3.13 - 2026-06-29
+
+- style: 优化项目元信息样式
+- fix: 优化文章标题和日期显示逻辑，简化代码结构
+
 ## v1.3.12 - 2026-05-31
 
 - feat: 支持 Comentario 评论系统 [@LTSlw](https://github.com/LTSlw)
