@@ -25,4 +25,5 @@ dock: "scroll" # scroll | always | float
 toc:
   enabled: true
   position: "center" # center | side
+  pinned: true       # true | false 是否固定目录显示，仅在侧边目录下生效
 ```

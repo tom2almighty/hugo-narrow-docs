@@ -25,4 +25,5 @@ The parameters of table of contents could cover by posts frontmatter.
 toc:
   enabled: true
   position: "center" # center | side
+  pinned: true       # true | false Side mode only: keep the TOC panel always visible when there is enough space
 ```
