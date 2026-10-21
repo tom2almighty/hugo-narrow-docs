@@ -33,12 +33,12 @@ mermaid: false
 # disable related posts
 showRelated: false
 
-# override the license; do not nest a post key in front matter
+# disable the license line
+license: false
+
+# or override name and link; providing name enables it
 license:
-  show: true
-  author: "Hugo Narrow"
   name: "CC BY-NC-SA 4.0"
-  description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
   url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ```
 

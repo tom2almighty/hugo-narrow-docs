@@ -9,23 +9,29 @@ post:
   showRelated: true
   relatedPostsCount: 3
   license:
-    show: true
-    author: "Hugo Narrow"
+    enabled: true
     name: "CC BY-NC-SA 4.0"
-    description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
     url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ```
+
+文章 frontmatter 可以关闭，或只覆盖名称和链接：
 
 ```yaml {filename="first-post.md"}
 showRelated: false
 relatedPostsCount: 5
+
+# 关闭版权行
+license: false
+```
+
+```yaml {filename="another-post.md"}
+# 提供 name 即视为启用；url 可选
 license:
-  show: true
-  author: "Hugo Narrow"
   name: "CC BY-NC-SA 4.0"
-  description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
   url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ```
+
+版权行只显示 `name` 和可选链接，不再需要 author、description 或当前页面 URL。
 
 ## 项目
 

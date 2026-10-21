@@ -9,23 +9,29 @@ post:
   showRelated: true
   relatedPostsCount: 3
   license:
-    show: true
-    author: "Hugo Narrow"
+    enabled: true
     name: "CC BY-NC-SA 4.0"
-    description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
     url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ```
+
+A post can disable the license, or override only the name and link:
 
 ```yaml {filename="first-post.md"}
 showRelated: false
 relatedPostsCount: 5
+
+# disable the license line
+license: false
+```
+
+```yaml {filename="another-post.md"}
+# providing name enables it; url is optional
 license:
-  show: true
-  author: "Hugo Narrow"
   name: "CC BY-NC-SA 4.0"
-  description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
   url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ```
+
+The license line only shows `name` and an optional link. Author, description, and the current page URL are no longer part of the config.
 
 ## Projects
 

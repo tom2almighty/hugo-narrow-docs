@@ -13,6 +13,7 @@ title: "更新日志"
 - feat: 日期格式收敛为 `long` / `short` / `month`，归档月份按语言本地化。
 - refactor!: 配置收敛，移除 `header.*`、`dock`、`timeFormat`、`toc.pinned`、`list.*`、`ui.appearance.*` 等参数；主题注册表移到 `data/themes.yaml`。
 - refactor!: 项目移除 `status` front matter，项目卡片不再显示状态。
+- refactor!: 文章版权配置精简为 `enabled` / `name` / `url`，版权行改为单行；移除 `author`、`description` 和当前页链接。
 
 ## v1.3.16 - 2026-09-01
 

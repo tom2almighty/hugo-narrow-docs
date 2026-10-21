@@ -33,12 +33,12 @@ mermaid: false
 # 关闭相关文章
 showRelated: false
 
-# 覆盖版权信息；不要在 frontmatter 里再嵌套 post
+# 关闭版权行
+license: false
+
+# 或覆盖名称和链接；提供 name 即启用
 license:
-  show: true
-  author: "Hugo Narrow"
   name: "CC BY-NC-SA 4.0"
-  description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
   url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ```
 
