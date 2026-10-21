@@ -20,67 +20,42 @@ Support AV number or BV number, `PART_NUMBER` is optinal, specifies which part t
 
 ## Link cards
 
-Link cards support three methods to import.
-
-### Use parameters directly
+### Single card
 
 ```bash
 {\{< link title="Google" description="The world largest search engine." url="https://google.com" icon="https://google.com/favicon.ico" >}\}
 ```
 
-### Use id or ref paremeter
+`title` and `url` are required; `description` and `icon` are optional. `icon` accepts:
 
-List data at `data/links.yaml`, then use `id` or `ref` parameter:
+- A full URL or site-relative path: rendered as an image.
+- An icon name such as `github`: uses the SVG in `assets/icons/`.
+- Empty: falls back to the `link` icon.
 
-```bash
-{\{< link id="github" >}\}
-{\{< link ref="github" >}\}
-```
+### Group
+
+`data/links.yaml` is a flat list grouped by a `group` field:
 
 ```yaml {filename="data/links.yaml"}
-social:
-  - id: github
-    title: GitHub
-    description: The world's largest code hosting platform.
-    url: https://github.com
-    icon: https://github.com/fluidicon.png
+- group: social
+  title: GitHub
+  description: The world's largest code hosting platform.
+  url: https://github.com
+  icon: https://github.com/fluidicon.png
 
-  - id: linkedin
-    title: LinkedIn
-    description: Career Social Network.
-    url: https://linkedin.com
-
-tool:
-  - id: vercel
-    title: Vercel
-    description: Deploy and Development Platform.
-    url: https://vercel.com
-    icon: https://vercel.com/favicon.ico
-
-  - id: netlify
-    title: Netlify
-    description: Deploy and Development Platform.
-    url: https://netlify.com
-    icon: https://netlify.com/favicon.ico
-
-  - id: github-pages
-    title: GitHub Pages
-    description: Static Pages Hosting.
-    url: https://pages.github.com
-    icon: https://github.com/fluidicon.png
+- group: social
+  title: LinkedIn
+  description: Career Social Network.
+  url: https://linkedin.com
 ```
 
-### Use group or category parameter
-
-List data at `data/links.yaml`, then use `group` or `category` parameter:
+Render the whole group in Markdown:
 
 ```bash
 {\{< link group="social" >}\}
-{\{< link category="social" >}\}
 ```
 
-> [!NOTE]
-> `icon` paramater is not required, if you don't define the value, the partials will find the favicon file(`.svg/.ico`), if still find no avaliable icons, it will fallback to `link.svg` of assets folder.
+A missing group, or an entry without `title` / `url`, fails the build instead of rendering a placeholder card.
 
 ## Button
 

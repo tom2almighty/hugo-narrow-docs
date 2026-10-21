@@ -20,67 +20,42 @@ title: 扩展短代码
 
 ## 链接卡片
 
-链接卡片支持三种方式使用。
-
-### 直接使用参数
+### 单卡
 
 ```bash
 {\{< link title="Google" description="世界上最大的搜索引擎。" url="https://google.com" icon="https://google.com/favicon.ico" >}\}
 ```
 
-### 使用 id 或 ref 参数
+`title` 和 `url` 必填，`description` 和 `icon` 可选。`icon` 支持三种写法：
 
-在 `data/links.yaml` 罗列数据后使用 `id` 或 `ref` 参数：
+- 完整 URL 或站内路径：渲染为图片。
+- 图标名（如 `github`）：使用 `assets/icons/` 下的 SVG。
+- 留空：使用 `link` 图标。
 
-```bash
-{\{< link id="github" >}\}
-{\{< link ref="github" >}\}
-```
+### 分组
+
+`data/links.yaml` 是一个扁平列表，用 `group` 字段分组：
 
 ```yaml {filename="data/links.yaml"}
-social:
-  - id: github
-    title: GitHub
-    description: The world's largest code hosting platform.
-    url: https://github.com
-    icon: https://github.com/fluidicon.png
+- group: social
+  title: GitHub
+  description: The world's largest code hosting platform.
+  url: https://github.com
+  icon: https://github.com/fluidicon.png
 
-  - id: linkedin
-    title: LinkedIn
-    description: Career Social Network.
-    url: https://linkedin.com
-
-tool:
-  - id: vercel
-    title: Vercel
-    description: Deploy and Development Platform.
-    url: https://vercel.com
-    icon: https://vercel.com/favicon.ico
-
-  - id: netlify
-    title: Netlify
-    description: Deploy and Development Platform.
-    url: https://netlify.com
-    icon: https://netlify.com/favicon.ico
-
-  - id: github-pages
-    title: GitHub Pages
-    description: Static Pages Hosting.
-    url: https://pages.github.com
-    icon: https://github.com/fluidicon.png
+- group: social
+  title: LinkedIn
+  description: Career Social Network.
+  url: https://linkedin.com
 ```
 
-### 使用 group 或 category 参数
-
-在 `data/links.yaml` 罗列数据后使用 `group` 或 `category` 参数：
+在 Markdown 中渲染整个分组：
 
 ```bash
 {\{< link group="social" >}\}
-{\{< link category="social" >}\}
 ```
 
-> [!NOTE]
-> `icon` 参数不是必须的, 如果未指定值, 模板会寻找链接的 `favicon` 文件(`.svg/.ico`), 如果仍未找到可用的值, 会回退到 `assets` 目录下的 `link.svg` 文件。
+分组不存在或条目缺少 `title` / `url` 时构建会直接报错，不会渲染错误占位卡片。
 
 ## 按钮
 
