@@ -1,37 +1,36 @@
 ---
-title: Codeblock
+title: Code Block
 ---
 
-Hugo Narrow add kinds of functions for codeblock:
-
-- click to copy
-- code language display
-- collapse codeblock
+Code blocks support copy, language/filename display, and collapsing.
 
 ```yaml {filename="params.yaml"}
 codeblock:
+  style: catppuccin-latte # Chroma light style
+  darkStyle: catppuccin-mocha # Chroma dark style
   collapse:
     enabled: true
-    defaultState: expanded # expanded, collapsed
-    autoCollapseLines: 30
-    autoCollapseHeight: 400
+    defaultState: expanded # expanded | collapsed
+    maxLines: 30
     collapsedHeight: 120
 ```
 
-## Highlight
+Blocks longer than `maxLines` start collapsed to `collapsedHeight` pixels. A single block can override this in Markdown attributes:
 
-Hugo Narrow uses `chroma` for syntax highlighting, with `github` and `github-dark` as the styles for light and dark modes respectively.
-
-To better integrate with the theme, the style files are created and adapted using the command `hugo gen chromastyles --style=github > ./assets/css/github.css`. Modifying the highlighting styles also requires generating them via the command line, making the process of replacing them somewhat complex:
-
-1. Generate the styles using the `hugo cli`.
-2. Replace the corresponding theme variable colors in `~/assets/css/chroma.css`.
-
-```bash
-# view all chroma styles
-hugo gen chromastyles --help
-
-# generate style files
-hugo gen chromastyles --style=github > ./github.css
-hugo gen chromastyles --style=github-dark > ./github-dark.css
+````markdown
+```go {filename="main.go" collapsed=true}
+package main
 ```
+````
+
+## Highlighting
+
+Syntax highlighting CSS is generated at build time by Hugo's `css.ChromaStyles`; there is no stylesheet to maintain. To change the palette, set `style` and `darkStyle`:
+
+```yaml {filename="params.yaml"}
+codeblock:
+  style: github
+  darkStyle: github-dark
+```
+
+Style names are Chroma's, for example `catppuccin-latte`, `catppuccin-mocha`, `github`, `github-dark`, `nord`, or `dracula`. An invalid name fails the build.

@@ -2,103 +2,63 @@
 title: 配色
 ---
 
-Hugo Narrow 内置多种配色，可以通过 Header 上的按钮切换，同时支持自定义配色。
+Hugo Narrow 内置 12 套配色，从 Dock 的外观面板切换。内置主题注册在主题自带的 `data/themes.yaml`，站点只需要选择默认值：
 
 ```yaml {filename="params.yaml"}
 colorScheme: "default"
-themes:
-  default:
-    name: "Default"
-    order: 1
-  claude:
-    name: "Claude"
-    order: 2
-  bumblebee:
-    name: "Bumblebee"
-    order: 3
-  emerald:
-    name: "Emerald"
-    order: 4
-  nord:
-    name: "Nord"
-    order: 5
-  sunset:
-    name: "Sunset"
-    order: 6
-  abyss:
-    name: "Abyss"
-    order: 7
-  dracula:
-    name: "Dracula"
-    order: 8
-  amethyst:
-    name: "Amethyst"
-    order: 9
-  slate:
-    name: "Slate"
-    order: 10
-  twitter:
-    name: "Twitter"
-    order: 11
 ```
 
 ## 自定义配色
 
-如果需要添加自定义配色，在 `~/assets/css/custom/` 目录下创建新的主题文件，然后在上述主题列表中添加主题，以 dracula 配色为例：
+在站点的 `assets/css/custom/` 下新建一个 CSS 文件，定义 `[data-theme="mytheme"]` 和对应的 `.dark`。变量名使用 shadcn 的原始 token：
 
 ```css
-[data-theme="dracula"] {
-  --color-primary: oklch(0.7 0.15 346.812);
-  --color-primary-foreground: oklch(0.98 0.007 106.545);
-  --color-secondary: oklch(0.68 0.12 301.883);
-  --color-secondary-foreground: oklch(0.98 0.007 106.545);
-  --color-accent: oklch(0.75 0.1 66.558);
-  --color-accent-foreground: oklch(0.2 0.024 66.558);
-  --color-background: oklch(0.95 0.01 277.508);
-  --color-foreground: oklch(0.3 0.022 277.508);
-  --color-muted: oklch(0.9 0.015 277.508);
-  --color-muted-foreground: oklch(0.5 0.02 277.508);
-  --color-border: oklch(0.82 0.02 277.508);
-  --color-card: oklch(0.95 0.01 277.508);
-  --color-card-foreground: oklch(0.3 0.022 277.508);
-  --color-popover: oklch(0.97 0.005 277.508);
-  --color-popover-foreground: oklch(0.3 0.022 277.508);
-
-  --color-note: oklch(0.65 0.15 240);
-  --color-tip: oklch(0.7 0.14 160);
-  --color-important: oklch(0.7 0.15 346.812);
-  --color-warning: oklch(0.75 0.16 85);
-  --color-caution: oklch(0.65 0.18 15);
+[data-theme="mytheme"] {
+  --primary: oklch(0.62 0.14 39.04);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.92 0.01 92.99);
+  --secondary-foreground: oklch(0.43 0.02 98.6);
+  --accent: oklch(0.92 0.01 92.99);
+  --accent-foreground: oklch(0.27 0.02 98.94);
+  --background: oklch(0.98 0.01 95.1);
+  --foreground: oklch(0.34 0.03 95.72);
+  --muted: oklch(0.93 0.02 90.24);
+  --muted-foreground: oklch(0.61 0.01 97.42);
+  --border: oklch(0.88 0.01 97.36);
+  --card: oklch(0.98 0.01 95.1);
+  --card-foreground: oklch(0.27 0.02 98.94);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.27 0.02 98.94);
 }
 
-[data-theme="dracula"].dark {
-  --color-primary: oklch(0.755 0.183 346.812);
-  --color-primary-foreground: oklch(0.151 0.036 346.812);
-  --color-secondary: oklch(0.742 0.148 301.883);
-  --color-secondary-foreground: oklch(0.148 0.029 301.883);
-  --color-accent: oklch(0.834 0.124 66.558);
-  --color-accent-foreground: oklch(0.167 0.024 66.558);
-  --color-background: oklch(0.288 0.022 277.508);
-  --color-foreground: oklch(0.977 0.007 106.545);
-  --color-muted: oklch(0.394 0.032 275.524);
-  --color-muted-foreground: oklch(0.879 0.006 275.524);
-  --color-border: oklch(0.45 0.035 277.508);
-  --color-card: oklch(0.32 0.025 277.508);
-  --color-card-foreground: oklch(0.977 0.007 106.545);
-  --color-popover: oklch(0.394 0.032 275.524);
-  --color-popover-foreground: oklch(0.977 0.007 106.545);
-
-  --color-note: oklch(0.7 0.14 240);
-  --color-tip: oklch(0.75 0.13 160);
-  --color-important: oklch(0.755 0.183 346.812);
-  --color-warning: oklch(0.8 0.15 85);
-  --color-caution: oklch(0.7 0.17 15);
+[data-theme="mytheme"].dark {
+  --primary: oklch(0.67 0.13 38.76);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.98 0.01 95.1);
+  --secondary-foreground: oklch(0.31 0 106.6);
+  --accent: oklch(0.21 0.01 95.42);
+  --accent-foreground: oklch(0.97 0.01 98.88);
+  --background: oklch(0.27 0 106.64);
+  --foreground: oklch(0.81 0.01 93.01);
+  --muted: oklch(0.22 0 106.71);
+  --muted-foreground: oklch(0.77 0.02 99.07);
+  --border: oklch(0.36 0.01 106.89);
+  --card: oklch(0.27 0 106.64);
+  --card-foreground: oklch(0.98 0.01 95.1);
+  --popover: oklch(0.27 0 106.64);
+  --popover-foreground: oklch(0.92 0 106.48);
 }
 ```
 
+然后在站点的 `data/themes.yaml` 里注册，外观面板才会列出它：
+
+```yaml {filename="data/themes.yaml"}
+mytheme:
+  name: My Theme
+  order: 20
+```
+
+`name` 是面板里显示的名字，`order` 决定排序。`key` 必须和 CSS 里的 `data-theme` 一致。
+
 > [!NOTE]
-> 也可以在 `~/assets/css/theme.css` 或者 `~/assets/css/custom.css` 中添加自定义主题。
->
-> 需要在本地安装依赖：`pnpm add -D tailwindcss @tailwindcss/cli`
->
-> 运行编译命令：`npx tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled.css`
+> 站点 `assets/css/custom/*.css` 会被 `head/css.html` 自动加载，直接写 CSS 变量即可，不需要重新编译 Tailwind。

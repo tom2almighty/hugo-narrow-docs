@@ -43,7 +43,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'SEO', link: '/en/features/seo' },
         { text: 'Home', link: '/en/features/home' },
         { text: 'Author', link: '/en/features/author' },
-        { text: 'Header', link: '/en/features/header' },
+        { text: 'Context Bar', link: '/en/features/header' },
         { text: 'Dock', link: '/en/features/dock' },
         { text: 'Color Schemes', link: '/en/features/color-schemes' },
         { text: 'Posts', link: '/en/features/posts' },

@@ -2,8 +2,6 @@
 title: 其他
 ---
 
-本节介绍一些其他设置。
-
 ## 阅读进度
 
 ```yaml {filename="params.yaml"}
@@ -12,61 +10,30 @@ readingProgress:
   showOnHomepage: false
 ```
 
-## 日期和时间本地化
+## 日期本地化
 
-由于不同语言下的日期和时间显示存在不同的顺序和习惯，因此 Hugo Narrow 使用 Hugo 内置的 `time.Format` 本地化日期和时间，更多细节访问 [Hugo 文档](https://gohugo.io/functions/time/format/) 获取。
-
-下面的参数可以被 `languages.yaml` 文件覆写。
+主题使用 Hugo 的 `time.Format`，按当前语言的 `locale` 自动本地化日期。只保留三个变体：
 
 ```yaml {filename="params.yaml"}
-# Date format
-
-# Customize the display format for article/page dates.
-# Accepted values:
-#   1) Hugo localization tokens (recommended): ":date_full" / ":date_long" / ":date_medium" / ":date_short"
-#      Automatically localized based on the current language's locale
-#      (e.g., en → "January 2, 2006", zh-Hans → "2006年1月2日").
-#      NOTE: ":date_medium" currently has an upstream bug under en-GB (month is omitted except September),
-#      so the theme uses ":date_long" for places that previously used medium.
-#   2) Go time layout string: reference time is "Mon Jan 2 15:04:05 MST 2006". Examples:
-#        "2006-01-02"           → 2024-05-01
-#        "January 2, 2006"      → May 1, 2024
-#        "2006年1月2日"         → 2024年5月1日
-#        "Jan 2, 2006"          → May 1, 2024
-#        "02 Jan 2006"          → 01 May 2024
-# Usage (which variants the theme actually renders):
-#   full   : reserved for opt-in custom usage
-#   long   : article detail page, homepage hero, list / card / timeline / JSON Feed,
-#            archive page, previous/next article (i.e. all theme-rendered dates)
-#   medium : not used by the theme by default (kept here for user customization)
-#   short  : not used by the theme by default (kept here for user customization)
-# Leave empty to keep the defaults below.
-# To configure per language, override via languages.<lang>.params.dateFormat in languages.yaml.
 dateFormat:
-  full: ":date_full"
-  long: ":date_long"
-  medium: ":date_medium"
-  short: ":date_short"
-  # Custom examples:
-  # long: "January 2, 2006"
-  # medium: "2006-01-02"
-  # short: "01/02"
-
-# Time format (optional)
-#
-# Used by helpers/date.html when called with kind="time", e.g.:
-#   {{ partial "helpers/date.html" (dict "date" .Date "variant" "short" "kind" "time") }}
-# Same value rules as dateFormat: either Hugo localization tokens
-# (":time_full" / ":time_long" / ":time_medium" / ":time_short") or a Go time layout
-# string (e.g. "15:04", "3:04 PM"). The theme does not render time values out of the
-# box; this block exists so users / custom partials can use it without extra config.
-# Per-language override is also supported via languages.<lang>.params.timeFormat.
-timeFormat:
-  full: ":time_full"
-  long: ":time_long"
-  medium: ":time_medium"
-  short: ":time_short"
-  # Custom examples:
-  # long: "15:04:05"
-  # short: "3:04 PM"
+  long: ":date_long" # 文章详情、页头
+  short: ":date_short" # 卡片、归档、系列
+  month: "January 2006" # 归档页的月份标题
 ```
+
+`long` 和 `short` 推荐使用 Hugo 的本地化 token：
+
+- `:date_long`：英文 `January 27, 2023`，中文 `2023年1月27日`
+- `:date_short`：英文 `1/27/23`，中文 `2023/1/27`
+
+Hugo 没有“年月”token，所以归档页的月份标题单独用 `month`。中文站点建议在 `languages.yaml` 覆盖，避免出现英文月份或错误的顺序：
+
+```yaml {filename="languages.yaml"}
+zh-hans:
+  locale: zh-Hans
+  params:
+    dateFormat:
+      month: "2006年1月"
+```
+
+也支持 Go 时间布局字符串，例如 `"2006-01-02"`、`"2006年1月2日"`。主题不渲染时间，需要时间格式时在自定义模板里直接调用 `time.Format`。

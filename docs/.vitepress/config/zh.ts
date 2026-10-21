@@ -44,7 +44,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'SEO', link: '/zh/features/seo' },
         { text: '首页', link: '/zh/features/home' },
         { text: '作者', link: '/zh/features/author' },
-        { text: '页头', link: '/zh/features/header' },
+        { text: '上下文栏', link: '/zh/features/header' },
         { text: 'Dock', link: '/zh/features/dock' },
         { text: '配色方案', link: '/zh/features/color-schemes' },
         { text: '文章', link: '/zh/features/posts' },

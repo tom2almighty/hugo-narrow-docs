@@ -2,10 +2,7 @@
 title: Posts
 ---
 
-Hugo Narrow supports configure the license of posts and the related posts.
-
-> [!TIP]
-> The parameters of license and related posts could cover by posts frontmatter. **DO NOT** add `post`.
+Posts support related content and a license note. Both can be overridden in post front matter without nesting a `post` key.
 
 ```yaml {filename="params.yaml"}
 post:
@@ -15,9 +12,8 @@ post:
     show: true
     author: "Hugo Narrow"
     name: "CC BY-NC-SA 4.0"
-    description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
+    description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
     url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
-    displayName: "CC BY-NC-SA 4.0"
 ```
 
 ```yaml {filename="first-post.md"}
@@ -27,7 +23,18 @@ license:
   show: true
   author: "Hugo Narrow"
   name: "CC BY-NC-SA 4.0"
-  description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
+  description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
   url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
-  displayName: "CC BY-NC-SA 4.0"
+```
+
+## Projects
+
+Projects live in the `projects` section and support `summary`, `featured`, `tags`, and `link`. Version 2.0 removes the `status` field, so project lists no longer maintain status colors.
+
+```yaml {filename="content/projects/my-project.md"}
+title: "My Project"
+summary: "One-line summary shown on the project card."
+featured: true
+tags: ["Hugo", "Tailwind CSS"]
+link: "https://github.com/you/project"
 ```

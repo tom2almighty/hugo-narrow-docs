@@ -2,18 +2,14 @@
 title: 导航菜单
 ---
 
-Hugo Narrow 支持三处导航菜单：
+2.0 只维护一份 `main` 菜单，由 Dock 的菜单按钮以弹出面板展示。顶部导航栏、页脚菜单和社交菜单都已移除；社交链接放在 `params.author.social`。
 
-- 顶部菜单（main）
-- 页脚菜单（footer）
-- 社交链接菜单（social）
-
-其中 `icon` 为标题前图标，使用 `SVG` 格式，放置在 `hugo-narrow/assets/icons/` 目录下，使用文件名作为参数值引用。
+`icon` 是标题前的图标，使用 `SVG`，放置在 `hugo-narrow/assets/icons/`，参数值就是文件名（不带 `.svg`）。
 
 > [!TIP]
-> 可以在 [Iconify Design](https://iconify.design/) 找到更多优质图标。
+> 可以在 [Iconify Design](https://iconify.design/) 找到更多图标。
 
-支持通过创建语言后缀文件为不同语言创建菜单：`menus.zh-hans.yaml`。
+支持通过语言后缀文件为不同语言创建菜单：`menus.zh-hans.yaml`。
 
 ```yaml {filename="exampleSite/config/_default/menus.yaml"}
 main:
@@ -29,7 +25,7 @@ main:
     params:
       icon: archive
 
-  # Example: parent item with dropdown submenu children
+  # 分组：子项会显示在弹出面板的同一个分区里
   - name: More
     weight: 30
     params:
@@ -63,52 +59,31 @@ main:
     params:
       icon: projects
 
-# footer menu
-footer:
   - name: Timeline
+    weight: 5
     pageRef: /timeline
-    weight: 10
+    parent: More
     params:
       icon: chart
 
   - name: About
+    weight: 6
     pageRef: /about
-    weight: 20
+    parent: More
     params:
       icon: about
 
   - name: Resume
+    weight: 7
     pageRef: /resume
-    weight: 25
+    parent: More
     params:
       icon: file-text
 
   - name: RSS Feed
     url: /index.xml
-    weight: 30
+    weight: 8
+    parent: More
     params:
       icon: rss
-
-# footer social link
-social:
-  - name: GitHub
-    url: https://github.com/username
-    weight: 10
-    params:
-      icon: github
-  - name: Twitter
-    url: https://twitter.com/username
-    weight: 20
-    params:
-      icon: twitter
-  - name: LinkedIn
-    url: https://linkedin.com/in/username
-    weight: 30
-    params:
-      icon: linkedin
-  - name: Email
-    url: mailto:your.email@example.com
-    weight: 40
-    params:
-      icon: email
 ```

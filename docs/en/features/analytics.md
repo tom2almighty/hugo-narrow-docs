@@ -2,28 +2,29 @@
 title: Analytics
 ---
 
-Hugo Narrow supports kinds of analytics engines：
+Hugo Narrow supports these analytics providers:
 
 - [Baidu](https://tongji.baidu.com/)
 - [Clarity](https://clarity.microsoft.com)
 - [Google](https://tagmanager.google.com)
 - [Umami](https://umami.is/)
 
+Set exactly one `provider`; leave it empty to disable analytics:
+
 ```yaml {filename="params.yaml"}
 analytics:
-  enabled: false
-  baidu:
-    enabled: false
-    id: "your-baidu-analytics-id"
-  clarity:
-    enabled: false
-    id: "your-clarity-analytics-id"
+  provider: "google" # google | baidu | clarity | umami
   google:
-    enabled: false
-    id: "your-google-analytics-id"
+    id: "G-XXXXXXXXXX"
+```
+
+Another provider:
+
+```yaml {filename="params.yaml"}
+analytics:
+  provider: "umami"
   umami:
-    enabled: false
     id: "your-umami-website-id"
-    src: "https://umami.com/myscript.js"
-    domains: "example.domain.com"
+    src: "https://umami.example.com/script.js"
+    domains: "example.com"
 ```

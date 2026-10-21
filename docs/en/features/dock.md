@@ -2,28 +2,32 @@
 title: Dock
 ---
 
-Hugo Narrow provide common function by dock, include back to top, back to previous page, jump to comments, search, table of contents.
+The dock is the theme's only page-level action surface: home, menu, search, TOC, comments (when enabled), appearance, and back-to-top.
 
-Dock has three display modes:
+Placement is fixed; there is no display-mode parameter:
 
-- `scroll`： show on scroll up
-- `always`： always visible
-- `float`： show on floating
+- At `>= 75rem` wide in landscape, the dock is a vertical capsule on the right. Scrolling down collapses it to the menu button; scrolling up, hovering, or focusing expands it.
+- Everywhere else (narrow screens, portrait, vertically folded devices) it is a bottom capsule and stays visible.
+- Back-to-top appears after scrolling past 80% of the viewport.
+- When comments are enabled, the dock gets a jump-to-comments button.
 
 ```yaml {filename="params.yaml"}
-dock: "scroll" # scroll | always | float
+comments:
+  enabled: true
+  system: "giscus"
 ```
 
-## Table of Contents
+## Table of contents
 
-The parameters of table of contents could cover by posts frontmatter.
-
-> [!IMPORTANT]
-> In the initial design, the table of contents was displayed in the middle of the page and controlled via the Dock, which aligns with the theme’s design philosophy and ensures consistent performance across different devices. However, multiple issues requesting a sidebar table of contents were submitted, so support for the sidebar table of contents and the parameter for configuring its position were added in version 1.2.
+The TOC opens from the dock as a single panel: right side on wide screens, bottom sheet on narrow screens. A post can disable it in front matter.
 
 ```yaml {filename="params.yaml"}
 toc:
   enabled: true
-  position: "center" # center | side
-  pinned: true       # true | false Side mode only: keep the TOC panel always visible when there is enough space
 ```
+
+```yaml {filename="first-post.md"}
+toc: false
+```
+
+On very wide screens (`>= 105rem` in landscape) the panel shows a pin button. The pin state is stored in the browser; there is no site parameter for it.

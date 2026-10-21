@@ -2,6 +2,18 @@
 title: "更新日志"
 ---
 
+## v2.0.0 - 2026-10-21
+
+- refactor!: 移除顶部导航栏，页面导航改为 Dock，页面位置由上下文栏展示。
+- refactor!: 设计 token 迁移到 shadcn 原始变量名，运行时外观参数与主题色分离。
+- refactor!: 正文改用 `@tailwindcss/typography`，只保留站点特有的标题锚点、代码块和表格覆盖。
+- refactor!: 卡片统一为无封面实现，通过 `post` / `project` / `series` variant 区分元信息。
+- feat: 代码块新增 `style` / `darkStyle`，直接切换 Chroma 亮暗配色。
+- feat: Dock 宽屏右侧竖排、滚动自动收起，窄屏底部常驻，并补回移动端返回顶部和评论入口。
+- feat: 日期格式收敛为 `long` / `short` / `month`，归档月份按语言本地化。
+- refactor!: 配置收敛，移除 `header.*`、`dock`、`timeFormat`、`toc.pinned`、`list.*`、`ui.appearance.*` 等参数；主题注册表移到 `data/themes.yaml`。
+- refactor!: 项目移除 `status` front matter，项目卡片不再显示状态。
+
 ## v1.3.16 - 2026-09-01
 
 - feat: 优化侧边目录展示，添加 `params.toc.pinned` 变量，控制侧边目录下是否固定显示目录。

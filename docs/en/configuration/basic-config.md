@@ -25,8 +25,8 @@ The site configuration is not much different from that of a regular Hugo site; t
 1. `permalinks.projects` sets the permalinks for projects.
 2. `outputFormats.WebAppManifest` automatically generates the `WebAppManifest` configuration for the theme.
 3. `highlight.lineNumbersInTable` needs to be set to `false`.
-4. `highlight.style` setting does not take effect. To change the Hugo Narrow codeblock style, you need to modify the CSS files.
-5. The minimum required version of Hugo is 0.158.
+4. `highlight.style` does not take effect. Code block colors come from `params.codeblock.style` and `darkStyle`.
+5. The minimum required version of Hugo is 0.165.0.
 
 ```yaml
 baseURL: https://hugo-narrow.vercel.app/
@@ -80,7 +80,7 @@ markup:
     lineNos: false
     lineNumbersInTable: false # Set to false
     noClasses: false
-    style: github # No need to change
+    style: github # ignored; use params.codeblock.style
     tabWidth: 2
 
 outputs:
@@ -96,7 +96,7 @@ outputFormats:
 module:
   hugoVersion:
     extended: true
-    min: 0.158.0
+    min: 0.165.0
 ```
 
 ## 主要 Sections

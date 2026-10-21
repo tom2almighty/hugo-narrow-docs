@@ -2,19 +2,26 @@
 title: 首页
 ---
 
-首页支持设置最近文章数量和首页模块顺序，并可以添加自定义模块。
+首页由若干区块按 `contentOrder` 顺序渲染。内置区块：
 
-1. 在 `layouts/_partials/home/` 目录创建模板文件。
-2. 在 `contentOrder` 列表添加模板文件名，首页各部分内容会按照列表顺序渲染。
-3. 如果你想去除某个模块，在列表中删除对应模板名称即可。
+- `author-section`：作者卡片
+- `recent-posts`：最近文章，默认 3 篇
+- `featured-projects`：`featured: true` 的项目，最多 4 个
+- `page-content`：首页 Markdown 正文
 
 ```yaml {filename="params.yaml"}
 home:
-  recentPostsCount: 5
+  recentPostsCount: 3
   contentOrder:
     - author-section
-    - custom_1.html
-    - featured-projects.html
     - recent-posts
-    - page-content
+    - featured-projects
 ```
+
+添加自定义区块：
+
+1. 在主题或站点的 `layouts/_partials/home/` 下创建模板文件。
+2. 把文件名加入 `contentOrder`，不需要写 `.html` 后缀；写了也会被自动去掉。
+3. 删除列表中的某一项即可隐藏对应区块。
+
+`page-content` 默认不渲染。需要展示首页 Markdown 时，把它加到 `contentOrder`。

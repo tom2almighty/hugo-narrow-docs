@@ -2,19 +2,26 @@
 title: Home
 ---
 
-Hugo Narro suports set the count of recent posts of home, you can also add custom sections to home.
+The home page renders its sections in `contentOrder`. Built-in sections:
 
-1. Create custom section partials at `layouts/_partials/home/` folder.
-2. Then add you custom section partials file name to `contentOrder`, site will be rendered as the list order.
-3. If you want to delete section at home, just delete the partial at the list.
+- `author-section`: author card
+- `recent-posts`: recent posts, 3 by default
+- `featured-projects`: projects with `featured: true`, up to 4
+- `page-content`: the home page Markdown body
 
 ```yaml {filename="params.yaml"}
 home:
-  recentPostsCount: 5
+  recentPostsCount: 3
   contentOrder:
     - author-section
-    - custom_1.html
-    - featured-projects.html
     - recent-posts
-    - page-content
+    - featured-projects
 ```
+
+To add a custom section:
+
+1. Create a partial under `layouts/_partials/home/` in the theme or your site.
+2. Add its name to `contentOrder`. The `.html` suffix is optional and is stripped automatically.
+3. Remove an entry to hide that section.
+
+`page-content` is not rendered by default. Add it to `contentOrder` if you want the home page Markdown body to appear.

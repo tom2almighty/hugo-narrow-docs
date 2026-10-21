@@ -25,8 +25,8 @@ exampleSite/
 1. `permalinks.projects` 为项目永久链接设置
 2. `outputFormats.WebAppManifest` 为主题自动生成 `WebAppManifest` 配置
 3. `highlight.lineNumbersInTable` 需要设置为 `false`
-4. `highlight.style` 设置不生效，Hugo Narrow 代码块主题更改需更改样式文件。
-5. Hugo 最低版本为 0.158
+4. `highlight.style` 不生效，代码块配色由 `params.codeblock.style` 和 `darkStyle` 控制。
+5. Hugo 最低版本为 0.165.0
 
 ```yaml
 baseURL: https://hugo-narrow.vercel.app/
@@ -80,7 +80,7 @@ markup:
     lineNos: false
     lineNumbersInTable: false # 设置为 false
     noClasses: false
-    style: github # 不需要更改
+    style: github # 不生效，改 params.codeblock.style
     tabWidth: 2
 
 outputs:
@@ -96,7 +96,7 @@ outputFormats:
 module:
   hugoVersion:
     extended: true
-    min: 0.158.0
+    min: 0.165.0
 ```
 
 ## 主要 Sections

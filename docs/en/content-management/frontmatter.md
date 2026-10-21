@@ -2,22 +2,14 @@
 title: Frontmatter
 ---
 
-Frontmatter is configruation section at the beginning of markdown files, it uses two `---` wrap (different data uses different symbol wrap, YAML is recommended) to define posts' basic information, or cover some parameters in `hugo.yaml`. Every archetypes has common and unique frontmatters.
+Frontmatter is the YAML block at the top of a Markdown file, wrapped in `---`. It defines page metadata and can override site-level parameters. Different archetypes support different fields.
 
-If you don't know what is archetypes, see [Archetypes](/docs/content-management/archetypes).
-
-## Default Archetypes
-
-Default archetypes is used to generate posts and other content for which no content template is defined.
-
-### Basic
+## Default archetype
 
 ```yaml
 ---
-# required
 title: "Post Title"
 date: 2025-06-13
-# Optinal
 description: "Post description"
 draft: false
 categories: ["categories 1", "categories 2"]
@@ -27,57 +19,37 @@ cover: ""
 ---
 ```
 
-If you don't matter SEO, you can use the theme archetypes to auto generate slug, it generates a random 7-digit string.
+If SEO does not matter, the archetype can generate a random 7-character slug.
+
+### Page-level overrides
 
 ```yaml
-slug: { { substr .File.UniqueID 0 7 } }
+# disable math
+katex: false
+
+# disable diagrams
+mermaid: false
+
+# disable related posts
+showRelated: false
+
+# override the license; do not nest a post key in front matter
+license:
+  show: true
+  author: "Hugo Narrow"
+  name: "CC BY-NC-SA 4.0"
+  description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
+  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ```
 
-> [!NOTE]
->
-> See [Hugo Documentation](https://gohugo.io/configuration/front-matter/) for more frontmatter.
+## Projects archetype
 
-### Other frontmatter
-
-Default(Posts) archetypes also support other frontmatters, these configurations involve some features of the theme, usually configured in `hugo.yaml`, but you can also modify the overrides in the frontmatter.
+Projects live in the `projects` section. Project-specific fields:
 
 ```yaml
-# math formula
-katex:
-  enabled: true
-  delimiters:
-    - left: $$
-      right: $$
-      display: true
-    - left: $
-      right: $
-      display: false
-
-# charts
-mermaid:
-  enabled: true
-
-# related posts
-showRelated: true
-
-# posts license
-post:
-  license:
-    show: true
-    author: "Hugo Narrow"
-    name: "CC BY-NC-SA 4.0"
-    description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
-    url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
-    displayName: "CC BY-NC-SA 4.0"
-```
-
-## Projects Archetype
-
-The projects archetype is used to generate project files. The basic frontmatter parameter are the same as the default archetype. There are also unique frontmatter. The following are the unique parameters of the projects archetype:
-
-```yaml
-cover: ""
+summary: "One-line summary shown on the project card."
 featured: false
-link: "www.example.com"
-status: "completed" # Options: completed, in_progress, planning
+link: "https://example.com"
 ```
+
+Version 2.0 removes `status`; project cards no longer render status.

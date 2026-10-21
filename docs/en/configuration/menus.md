@@ -2,18 +2,14 @@
 title: Menus
 ---
 
-Hugo Narrow supports three menus：
+Version 2.0 maintains a single `main` menu, shown in a popover from the dock's menu button. The top navbar, footer menu, and social menu are gone; social links live in `params.author.social`.
 
-- Main menu at header
-- footer menu
-- social menu
-
-The `icon` is the icon before the title. It uses the `SVG` format and should be placed in the `hugo-narrow/assets/icons/` directory. The filename is used as the parameter value for reference.
+`icon` is the icon shown before the title. It uses SVG files from `hugo-narrow/assets/icons/`; pass the filename without `.svg`.
 
 > [!TIP]
-> You can find more great icons at [Iconify Design](https://iconify.design/).
+> You can find more icons at [Iconify Design](https://iconify.design/).
 
-Supports creating menus for different languages by creating language suffix files: `menus.zh-hans.yaml`.
+Create language-specific menus with a language suffix: `menus.zh-hans.yaml`.
 
 ```yaml {filename="exampleSite/config/_default/menus.yaml"}
 main:
@@ -29,7 +25,7 @@ main:
     params:
       icon: archive
 
-  # Example: parent item with dropdown submenu children
+  # Group: children render in one section of the popover
   - name: More
     weight: 30
     params:
@@ -63,52 +59,31 @@ main:
     params:
       icon: projects
 
-# footer menu
-footer:
   - name: Timeline
+    weight: 5
     pageRef: /timeline
-    weight: 10
+    parent: More
     params:
       icon: chart
 
   - name: About
+    weight: 6
     pageRef: /about
-    weight: 20
+    parent: More
     params:
       icon: about
 
   - name: Resume
+    weight: 7
     pageRef: /resume
-    weight: 25
+    parent: More
     params:
       icon: file-text
 
   - name: RSS Feed
     url: /index.xml
-    weight: 30
+    weight: 8
+    parent: More
     params:
       icon: rss
-
-# footer social link
-social:
-  - name: GitHub
-    url: https://github.com/username
-    weight: 10
-    params:
-      icon: github
-  - name: Twitter
-    url: https://twitter.com/username
-    weight: 20
-    params:
-      icon: twitter
-  - name: LinkedIn
-    url: https://linkedin.com/in/username
-    weight: 30
-    params:
-      icon: linkedin
-  - name: Email
-    url: mailto:your.email@example.com
-    weight: 40
-    params:
-      icon: email
 ```

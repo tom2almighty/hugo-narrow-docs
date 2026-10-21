@@ -9,21 +9,22 @@ Hugo Narrow 支持多种站点统计：
 - [Google](https://tagmanager.google.com)
 - [Umami](https://umami.is/)
 
+只配置一个 `provider`，留空即关闭：
+
 ```yaml {filename="params.yaml"}
 analytics:
-  enabled: false
-  baidu:
-    enabled: false
-    id: "your-baidu-analytics-id"
-  clarity:
-    enabled: false
-    id: "your-clarity-analytics-id"
+  provider: "google" # google | baidu | clarity | umami
   google:
-    enabled: false
-    id: "your-google-analytics-id"
+    id: "G-XXXXXXXXXX"
+```
+
+其他提供商：
+
+```yaml {filename="params.yaml"}
+analytics:
+  provider: "umami"
   umami:
-    enabled: false
     id: "your-umami-website-id"
-    src: "https://umami.com/myscript.js"
-    domains: "example.domain.com"
+    src: "https://umami.example.com/script.js"
+    domains: "example.com"
 ```

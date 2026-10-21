@@ -2,19 +2,15 @@
 title: SEO
 ---
 
-SEO configuration used for Search Engine Optimization, `favicon` use `SVG` format.
+SEO configuration used for search engine optimization. The author meta comes from `params.author.name`, and the page language comes from Hugo's `site.Language.Locale`; the separate `defaultAuthor` and `language` parameters are gone.
 
 ```yaml {filename="params.yaml"}
-# Basic site info with SEO
-description: "A modern, clean, and minimal Hugo theme built with Tailwind CSS 4.0. Support custom themes, dark mode, and responsive design."
+description: "A modern, clean, and minimal Hugo theme built with Tailwind CSS 4.0."
 keywords: ["Hugo", "Blog", "Theme", "Technology", "Programming"]
-defaultAuthor: "Hugo Narrow"
-language: "en-US"
 shortName: "Hugo Narrow" # PWA
 images:
   - "/images/og-default.avif"
 
-# Favicon
 favicon:
   svg: "/favicon.svg" # SVG format favicon (recommended)
 ```
