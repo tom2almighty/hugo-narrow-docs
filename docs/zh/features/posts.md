@@ -2,36 +2,30 @@
 title: 文章
 ---
 
-文章支持相关文章和版权信息，两者都可以在文章 frontmatter 覆盖，不需要嵌套 `post` 字段。
+文章支持相关文章和版权标题，两者都可以在文章 frontmatter 覆盖，不需要嵌套 `post` 字段。
 
 ```yaml {filename="params.yaml"}
 post:
   showRelated: true
   relatedPostsCount: 3
-  license:
-    enabled: true
-    name: "CC BY-NC-SA 4.0"
-    url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  license: "CC BY-NC-SA 4.0" # 显示在文章顶部元信息；留空隐藏
 ```
 
-文章 frontmatter 可以关闭，或只覆盖名称和链接：
+文章 frontmatter 可以关闭，或覆盖标题：
 
 ```yaml {filename="first-post.md"}
 showRelated: false
 relatedPostsCount: 5
 
-# 关闭版权行
+# 关闭
 license: false
 ```
 
 ```yaml {filename="another-post.md"}
-# 提供 name 即视为启用；url 可选
-license:
-  name: "CC BY-NC-SA 4.0"
-  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+license: "MIT"
 ```
 
-版权行只显示 `name` 和可选链接，不再需要 author、description 或当前页面 URL。
+版权标题只显示在文章顶部的日期、阅读时间、字数这一行，没有链接，也没有独立版权区块。
 
 ## 项目
 

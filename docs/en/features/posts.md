@@ -2,36 +2,30 @@
 title: Posts
 ---
 
-Posts support related content and a license note. Both can be overridden in post front matter without nesting a `post` key.
+Posts support related content and a license title. Both can be overridden in post front matter without nesting a `post` key.
 
 ```yaml {filename="params.yaml"}
 post:
   showRelated: true
   relatedPostsCount: 3
-  license:
-    enabled: true
-    name: "CC BY-NC-SA 4.0"
-    url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  license: "CC BY-NC-SA 4.0" # shown in the post meta line; empty to hide
 ```
 
-A post can disable the license, or override only the name and link:
+A post can disable it, or override the title:
 
 ```yaml {filename="first-post.md"}
 showRelated: false
 relatedPostsCount: 5
 
-# disable the license line
+# disable
 license: false
 ```
 
 ```yaml {filename="another-post.md"}
-# providing name enables it; url is optional
-license:
-  name: "CC BY-NC-SA 4.0"
-  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+license: "MIT"
 ```
 
-The license line only shows `name` and an optional link. Author, description, and the current page URL are no longer part of the config.
+The license title appears in the same top meta line as the date, reading time, and word count. There is no link and no separate license block.
 
 ## Projects
 

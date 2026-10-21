@@ -33,13 +33,11 @@ mermaid: false
 # 关闭相关文章
 showRelated: false
 
-# 关闭版权行
+# 关闭版权标题
 license: false
 
-# 或覆盖名称和链接；提供 name 即启用
-license:
-  name: "CC BY-NC-SA 4.0"
-  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+# 或覆盖标题
+license: "MIT"
 ```
 
 ## 项目内容模板

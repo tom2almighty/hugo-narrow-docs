@@ -33,13 +33,11 @@ mermaid: false
 # disable related posts
 showRelated: false
 
-# disable the license line
+# disable the license title
 license: false
 
-# or override name and link; providing name enables it
-license:
-  name: "CC BY-NC-SA 4.0"
-  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+# or override the title
+license: "MIT"
 ```
 
 ## Projects archetype
