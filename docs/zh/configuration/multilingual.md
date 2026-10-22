@@ -2,6 +2,8 @@
 title: 多语言
 ---
 
+# 多语言
+
 Hugo Narrow 支持多语言站点。语言切换位于 Dock 的外观面板中：面板里显示当前语言按钮，点击后打开二级语言列表。当前内置以下语言的 UI 文案：
 
 - `ar`、`de`、`en`、`es`、`fr`、`it`、`ja`、`ko`、`pt`、`ru`、`vi`、`zh-hans`、`zh-hant`

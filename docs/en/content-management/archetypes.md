@@ -2,6 +2,8 @@
 title: Archetypes
 ---
 
+# Archetypes
+
 Archetypes is template for new content, located at `~/archetypes`. A content file consists of frontmatter and markup. Frontmatter can be TOML, YAML, JSON.
 
 `~/archetypes/default.md` is the default archetype. Hugo Narrow include the following default archetypes:

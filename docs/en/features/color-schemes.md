@@ -2,6 +2,8 @@
 title: Color Schemes
 ---
 
+# Color Schemes
+
 Hugo Narrow ships 12 color schemes, switched from the dock's appearance panel. Built-in schemes are registered in the theme's `data/themes.yaml`; the site only picks the default:
 
 ```yaml {filename="params.yaml"}

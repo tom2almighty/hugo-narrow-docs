@@ -2,6 +2,8 @@
 title: Extended Shortcodes
 ---
 
+# Extended Shortcodes
+
 Delete the `\` between `{\{` and `}\}`.
 
 ## Bilibili

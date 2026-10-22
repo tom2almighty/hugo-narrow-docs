@@ -2,6 +2,8 @@
 title: Menus
 ---
 
+# Menus
+
 Version 2.0 maintains a single `main` menu, shown in a popover from the dock's menu button. The top navbar, footer menu, and social menu are gone; social links live in `params.author.social`.
 
 `icon` is the icon shown before the title. It uses SVG files from `hugo-narrow/assets/icons/`; pass the filename without `.svg`.

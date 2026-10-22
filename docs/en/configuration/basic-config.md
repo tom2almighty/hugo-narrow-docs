@@ -2,6 +2,8 @@
 title: Basic Site Configuration
 ---
 
+# Basic Site Configuration
+
 Hugo supports `hugo.toml`、`hugo.yaml`、`hugo.json` format and follow the order, supporting split configuration file by envirament, root configuration key, and language.
 
 > [!NOTE]

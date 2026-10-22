@@ -2,6 +2,8 @@
 title: 文章
 ---
 
+# 文章
+
 文章支持相关文章和版权标题，两者都可以在文章 frontmatter 覆盖，不需要嵌套 `post` 字段。
 
 ```yaml {filename="params.yaml"}

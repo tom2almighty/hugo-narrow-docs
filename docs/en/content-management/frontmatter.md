@@ -2,6 +2,8 @@
 title: Frontmatter
 ---
 
+# Frontmatter
+
 Frontmatter is the YAML block at the top of a Markdown file, wrapped in `---`. It defines page metadata and can override site-level parameters. Different archetypes support different fields.
 
 ## Default archetype

@@ -2,6 +2,8 @@
 title: Author
 ---
 
+# Author
+
 Hugo Narrow author information render at hoempage, in the sample configuration, the `avatar` file is placed in the `~/static/` directory. `icon` value uses the file name of `~/assets/icons/` directory.
 
 ```yaml {filename="params.yaml"}

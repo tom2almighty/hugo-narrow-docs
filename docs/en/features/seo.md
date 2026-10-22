@@ -2,6 +2,8 @@
 title: SEO
 ---
 
+# SEO
+
 SEO configuration used for search engine optimization. The author meta comes from `params.author.name`, and the page language comes from Hugo's `site.Language.Locale`; the separate `defaultAuthor` and `language` parameters are gone.
 
 ```yaml {filename="params.yaml"}

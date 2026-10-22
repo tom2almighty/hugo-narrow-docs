@@ -2,6 +2,8 @@
 title: 图库
 ---
 
+# 图库
+
 Hugo Narrow 支持图片点击放大，以及 `justified`、`masonry`、`grid` 三种图库布局。使用原生 Markdown 图片语法即可创建图库。
 
 ```yaml {filename="params.yaml"}

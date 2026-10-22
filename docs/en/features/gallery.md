@@ -2,6 +2,8 @@
 title: Gallery
 ---
 
+# Gallery
+
 Hugo Narrow supports a lightbox and three gallery layouts: `justified`, `masonry`, and `grid`. Plain Markdown images are enough to create a gallery.
 
 ```yaml {filename="params.yaml"}

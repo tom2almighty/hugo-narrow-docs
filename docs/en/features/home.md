@@ -2,6 +2,8 @@
 title: Home
 ---
 
+# Home
+
 The home page renders its sections in `contentOrder`. Built-in sections:
 
 - `author-section`: author card

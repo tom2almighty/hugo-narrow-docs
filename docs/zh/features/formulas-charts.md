@@ -2,6 +2,8 @@
 title: 公式和图表
 ---
 
+# 公式和图表
+
 ## 公式
 
 Hugo Narrow 通过 [Katex](https://katex.org/) 支持公式。

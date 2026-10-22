@@ -2,6 +2,8 @@
 title: 代码块
 ---
 
+# 代码块
+
 代码块支持一键复制、语言/文件名显示和折叠。
 
 ```yaml {filename="params.yaml"}

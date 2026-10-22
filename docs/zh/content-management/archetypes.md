@@ -2,6 +2,8 @@
 title: 内容模板
 ---
 
+# 内容模板
+
 Archetypes 是新内容的模板，通常位于 `~/archetypes` 文件夹下，由元数据（frontmatter）和标记内容（markup）组成，元数据可以使用 TOML、YAML、JSON。
 
 `~/archetypes/default.md` 是默认的内容模板，Hugo Narrow 默认内容模板如下：

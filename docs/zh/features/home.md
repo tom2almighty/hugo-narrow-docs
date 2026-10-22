@@ -2,6 +2,8 @@
 title: 首页
 ---
 
+# 首页
+
 首页由若干区块按 `contentOrder` 顺序渲染。内置区块：
 
 - `author-section`：作者卡片

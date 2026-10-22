@@ -2,6 +2,8 @@
 title: Context Bar
 ---
 
+# Context Bar
+
 Version 2.0 removes the top navigation bar. Page navigation lives in the dock; the current location lives in the context bar.
 
 - Every page except home and 404 shows a breadcrumb at the top.

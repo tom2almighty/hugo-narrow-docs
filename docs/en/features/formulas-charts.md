@@ -2,6 +2,8 @@
 title: Formulas and Charts
 ---
 
+# Formulas and Charts
+
 ## Formulas
 
 Hugo Narrwo supports formulas by [Katex](https://katex.org/).

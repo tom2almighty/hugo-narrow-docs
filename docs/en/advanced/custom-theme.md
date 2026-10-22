@@ -2,6 +2,8 @@
 title: Custom Hugo Narrow
 ---
 
+# Custom Hugo Narrow
+
 ## Uses themes by git submodule
 
 When you add the theme using git submodule, copy the theme files you want to modify to the same path in the site's root directory and define your modifications there.

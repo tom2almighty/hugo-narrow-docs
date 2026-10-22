@@ -2,6 +2,8 @@
 title: Hugo Mod
 ---
 
+# Hugo Mod
+
 ## Prerequisites
 
 You should install the following softwares before start:

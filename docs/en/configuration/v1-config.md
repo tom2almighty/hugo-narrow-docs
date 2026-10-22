@@ -2,6 +2,8 @@
 title: v1 Configuration (Legacy)
 ---
 
+# v1 Configuration (Legacy)
+
 This page documents Hugo Narrow 1.x configuration for v1.4.1 and earlier on the `v1` branch. Use the other pages of this site for 2.0 configuration.
 
 > [!NOTE]

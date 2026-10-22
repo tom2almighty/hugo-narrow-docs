@@ -2,6 +2,8 @@
 title: Posts
 ---
 
+# Posts
+
 Posts support related content and a license title. Both can be overridden in post front matter without nesting a `post` key.
 
 ```yaml {filename="params.yaml"}

@@ -2,6 +2,8 @@
 title: Local Resources
 ---
 
+# Local Resources
+
 Hugo Narrow support import local resources such as images with three methods:
 
 - Page Bundles (markdown folder)

@@ -2,6 +2,8 @@
 title: 导航菜单
 ---
 
+# 导航菜单
+
 2.0 只维护一份 `main` 菜单，由 Dock 的菜单按钮以弹出面板展示。顶部导航栏、页脚菜单和社交菜单都已移除；社交链接放在 `params.author.social`。
 
 `icon` 是标题前的图标，使用 `SVG`，放置在 `hugo-narrow/assets/icons/`，参数值就是文件名（不带 `.svg`）。

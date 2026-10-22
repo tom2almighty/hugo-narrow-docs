@@ -2,6 +2,8 @@
 title: 站点统计
 ---
 
+# 站点统计
+
 Hugo Narrow 支持多种站点统计：
 
 - [百度分析](https://tongji.baidu.com/)

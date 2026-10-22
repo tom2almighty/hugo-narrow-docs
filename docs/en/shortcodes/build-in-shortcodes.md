@@ -2,6 +2,8 @@
 title: Build in Shortcodes
 ---
 
+# Build in Shortcodes
+
 Hugo has built in some shortcodes:
 
 - Details

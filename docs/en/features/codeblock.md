@@ -2,6 +2,8 @@
 title: Code Block
 ---
 
+# Code Block
+
 Code blocks support copy, language/filename display, and collapsing.
 
 ```yaml {filename="params.yaml"}

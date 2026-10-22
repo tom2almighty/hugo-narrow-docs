@@ -2,6 +2,8 @@
 title: Multilingual
 ---
 
+# Multilingual
+
 Hugo Narrow supports multilingual sites. Language switching lives in the dock's appearance panel: the panel shows the current language and opens a secondary language list. Built-in UI translations cover:
 
 - `ar`, `de`, `en`, `es`, `fr`, `it`, `ja`, `ko`, `pt`, `ru`, `vi`, `zh-hans`, `zh-hant`

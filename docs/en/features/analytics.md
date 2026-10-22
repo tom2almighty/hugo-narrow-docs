@@ -2,6 +2,8 @@
 title: Analytics
 ---
 
+# Analytics
+
 Hugo Narrow supports these analytics providers:
 
 - [Baidu](https://tongji.baidu.com/)

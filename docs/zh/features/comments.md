@@ -2,6 +2,8 @@
 title: 评论
 ---
 
+# 评论
+
 Hugo Narrow 支持多种评论系统：
 
 - [artalk](https://artalk.js.org/)

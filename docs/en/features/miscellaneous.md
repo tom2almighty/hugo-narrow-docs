@@ -2,6 +2,8 @@
 title: Miscellaneous
 ---
 
+# Miscellaneous
+
 ## Reading progress
 
 ```yaml {filename="params.yaml"}

@@ -2,6 +2,8 @@
 title: Comments
 ---
 
+# Comments
+
 Hugo Narrow supports kinds of comments:
 
 - [artalk](https://artalk.js.org/)

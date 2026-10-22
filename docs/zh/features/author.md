@@ -2,6 +2,8 @@
 title: 作者
 ---
 
+# 作者
+
 Hugo Narrow 作者信息位于首页，示例配置中 `avatar` 文件放置在 `~/static/` 目录，`icon` 值使用 `~/assets/icons/` 目录下文件名。
 
 ```yaml {filename="params.yaml"}

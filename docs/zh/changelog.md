@@ -2,12 +2,7 @@
 title: "更新日志"
 ---
 
-## v1.4.1 - 2026-10-22
-
-- fix: 移除失效的外观面板 `header.showThemeSwitch` / `showDarkModeSwitch` / `showContentWidthSwitch` 开关。
-- refactor: 语言切换固定为弹出式列表，移除 `showLanguageSwitch` 和 `languageSwitchMode`。
-- refactor: 代码块配色改用 `markup.highlight.style` 的双模式 style，移除 `codeblock.style` / `darkStyle`。
-- ci: Hugo 版本固定在分支 workflow 中，v1 使用 Hugo 0.165.0。
+# 更新日志
 
 ## v2.0.0 - 2026-10-22
 
@@ -24,6 +19,13 @@ title: "更新日志"
 - refactor!: 项目移除 `status` front matter，项目卡片不再显示状态。
 - refactor!: 文章版权配置精简为单个标题字符串 `post.license`，并移到文章顶部元信息行；移除链接和独立版权区块。
 - docs: 新增 v1 配置（旧版）页面，说明 v1.4.1 参数和迁移对应关系。
+
+## v1.4.1 - 2026-10-22
+
+- fix: 移除失效的外观面板 `header.showThemeSwitch` / `showDarkModeSwitch` / `showContentWidthSwitch` 开关。
+- refactor: 语言切换固定为弹出式列表，移除 `showLanguageSwitch` 和 `languageSwitchMode`。
+- refactor: 代码块配色改用 `markup.highlight.style` 的双模式 style，移除 `codeblock.style` / `darkStyle`。
+- ci: Hugo 版本固定在分支 workflow 中，v1 使用 Hugo 0.165.0。
 
 ## v1.3.16 - 2026-09-01
 

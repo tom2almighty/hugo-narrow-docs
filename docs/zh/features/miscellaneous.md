@@ -2,6 +2,8 @@
 title: 其他
 ---
 
+# 其他
+
 ## 阅读进度
 
 ```yaml {filename="params.yaml"}

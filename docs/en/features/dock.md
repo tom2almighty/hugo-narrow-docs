@@ -2,6 +2,8 @@
 title: Dock
 ---
 
+# Dock
+
 The dock is the theme's only page-level action surface: home, menu, search, TOC, comments (when enabled), appearance, and back-to-top.
 
 Placement is fixed; there is no display-mode parameter:

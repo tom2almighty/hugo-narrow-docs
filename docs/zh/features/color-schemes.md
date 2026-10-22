@@ -2,6 +2,8 @@
 title: 配色
 ---
 
+# 配色
+
 Hugo Narrow 内置 12 套配色，从 Dock 的外观面板切换。内置主题注册在主题自带的 `data/themes.yaml`，站点只需要选择默认值：
 
 ```yaml {filename="params.yaml"}

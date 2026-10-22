@@ -2,6 +2,8 @@
 title: Organize Files
 ---
 
+# Organize Files
+
 ## Contents Structure
 
 By default, Hugo indexes all Markdown files in the `content` directory, and the contents structure determines the final site output structure.
