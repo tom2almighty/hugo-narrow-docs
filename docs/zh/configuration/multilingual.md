@@ -2,7 +2,7 @@
 title: 多语言
 ---
 
-Hugo Narrow 支持多语言站点，语言切换收在 Dock 的外观面板里。当前内置以下语言的 UI 文案：
+Hugo Narrow 支持多语言站点。语言切换位于 Dock 的外观面板中：面板里显示当前语言按钮，点击后打开二级语言列表。当前内置以下语言的 UI 文案：
 
 - `ar`、`de`、`en`、`es`、`fr`、`it`、`ja`、`ko`、`pt`、`ru`、`vi`、`zh-hans`、`zh-hant`
 
@@ -27,13 +27,11 @@ zh-hans:
   locale: zh-Hans
   label: "简体中文"
   weight: 2
-  # Hugo 没有“年月”token，归档页月份标题需要单独覆盖
-  params:
-    dateFormat:
-      month: "2006年1月"
 ```
 
-日期格式说明见[其他](/zh/features/miscellaneous)。`dateFormat` 支持 `long`、`short`、`month` 三个键，可以按语言覆盖；不再有 `timeFormat`。
+日期格式说明见[其他](/zh/features/miscellaneous)。`dateFormat` 支持 `long`、`short`、`month` 三个键，可以按语言覆盖；主题已内置常见语言的月份格式，不再需要为中文手工配置 `month`，也不再保留 `timeFormat`。
+
+`locale` 请使用 Hugo 支持的 BCP 47 标签。中文使用 `zh-Hans` / `zh-Hant`；`zh-CN`、`zh-TW` 会回退到英文日期。阿拉伯语等 RTL 语言需要在语言配置中设置 `direction: rtl`。
 
 ## 翻译文件
 

@@ -35,6 +35,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '基础配置', link: '/zh/configuration/basic-config' },
         { text: '菜单', link: '/zh/configuration/menus' },
         { text: '多语言', link: '/zh/configuration/multilingual' },
+        { text: 'v1 配置（旧版）', link: '/zh/configuration/v1-config' },
       ],
     },
     {

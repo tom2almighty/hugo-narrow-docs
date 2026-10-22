@@ -34,6 +34,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'Basic Config', link: '/en/configuration/basic-config' },
         { text: 'Menus', link: '/en/configuration/menus' },
         { text: 'Multilingual', link: '/en/configuration/multilingual' },
+        { text: 'v1 Configuration (Legacy)', link: '/en/configuration/v1-config' },
       ],
     },
     {

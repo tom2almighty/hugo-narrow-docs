@@ -6,7 +6,7 @@ title: Hugo Mod
 
 You should install the following softwares before start:
 
-- [Hugo Extended](https://gohugo.io/installation/), Version 0.158 or later
+- [Hugo Extended](https://gohugo.io/installation/), Version 0.165 or later
 - [Git](https://git-scm.com/)
 - [Go](https://go.dev/)
 
@@ -39,7 +39,7 @@ Modify `hugo-narrow/config/_default/hugo.yaml`, import theme according to hugo m
 module:
   hugoVersion:
     extended: true
-    min: 0.158.0
+    min: 0.165.0
   imports:
     - path: github.com/tom2almighty/hugo-narrow
 ```

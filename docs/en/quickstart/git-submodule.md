@@ -6,7 +6,7 @@ title: Git Submodule
 
 You should install the following softwares before start:
 
-- [Hugo Extended](https://gohugo.io/installation/), Version 0.158 or later
+- [Hugo Extended](https://gohugo.io/installation/), Version 0.165 or later
 - [Git](https://git-scm.com/)
 
 ## Steps

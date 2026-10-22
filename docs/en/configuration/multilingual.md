@@ -2,7 +2,7 @@
 title: Multilingual
 ---
 
-Hugo Narrow supports multilingual sites. Language switching lives in the dock's appearance panel. Built-in UI translations cover:
+Hugo Narrow supports multilingual sites. Language switching lives in the dock's appearance panel: the panel shows the current language and opens a secondary language list. Built-in UI translations cover:
 
 - `ar`, `de`, `en`, `es`, `fr`, `it`, `ja`, `ko`, `pt`, `ru`, `vi`, `zh-hans`, `zh-hant`
 
@@ -27,13 +27,11 @@ zh-hans:
   locale: zh-Hans
   label: "简体中文"
   weight: 2
-  # Hugo has no "month year" token, so archives need a per-language override.
-  params:
-    dateFormat:
-      month: "2006年1月"
 ```
 
-See [Miscellaneous](/en/features/miscellaneous) for date formatting. `dateFormat` has three keys: `long`, `short`, and `month`, all overridable per language. `timeFormat` is gone.
+See [Miscellaneous](/en/features/miscellaneous) for date formatting. `dateFormat` has three keys: `long`, `short`, and `month`, all overridable per language. The theme ships month formats for common languages, so Chinese sites no longer need a manual `month` override; `timeFormat` is gone.
+
+Use a BCP 47 locale supported by Hugo. For Chinese, use `zh-Hans` or `zh-Hant`; `zh-CN` and `zh-TW` fall back to English dates. For RTL languages such as Arabic, set `direction: rtl` in the language configuration.
 
 ## Translation by file name
 

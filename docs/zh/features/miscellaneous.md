@@ -21,12 +21,33 @@ dateFormat:
   month: "January 2006" # 归档页的月份标题
 ```
 
-`long` 和 `short` 推荐使用 Hugo 的本地化 token：
+这个配置块是可选的，主题已经内置上面这组默认值。只有需要改变格式时才需要写入 `params.yaml`，也可以按语言覆盖：
+
+```yaml {filename="languages.yaml"}
+zh-hans:
+  locale: zh-Hans
+  params:
+    dateFormat:
+      short: "2006/1/2"
+```
+
+`long` 和 `short` 推荐使用 Hugo 的本地化 token，具体输出由 `locale` 决定：
 
 - `:date_long`：英文 `January 27, 2023`，中文 `2023年1月27日`
-- `:date_short`：英文 `1/27/23`，中文 `2023/1/27`
+- `:date_short`：英文 `1/27/23`，中文 `23/1/27`（Hugo 当前 locale 数据使用两位年份）
 
-Hugo 没有“年月”token，所以归档页的月份标题单独用 `month`。中文站点建议在 `languages.yaml` 覆盖，避免出现英文月份或错误的顺序：
+如果需要固定四位年份，可以用 Go 布局覆盖 `short`，例如 `"2006/1/2"`。
+
+### 归档页月份
+
+Hugo 没有“年月”token，主题在 `data/dateFormats.yaml` 中为需要调整顺序或措辞的语言提供了默认值：
+
+- `zh-hans`、`zh-hant`、`zh`、`ja`：`2006年1月`
+- `ko`：`2006년 1월`
+- `vi`：`Tháng 1, 2006`
+- `es`、`pt`：`January de 2006`
+
+其他语言使用 `"January 2006"`，Hugo 会按 `locale` 本地化月份名称。通常情况下不需要配置 `month`；需要自定义时再覆盖：
 
 ```yaml {filename="languages.yaml"}
 zh-hans:
@@ -36,4 +57,8 @@ zh-hans:
       month: "2006年1月"
 ```
 
-也支持 Go 时间布局字符串，例如 `"2006-01-02"`、`"2006年1月2日"`。主题不渲染时间，需要时间格式时在自定义模板里直接调用 `time.Format`。
+### locale 取值
+
+`locale` 必须是 Hugo 支持的 BCP 47 标签。中文请使用 `zh-Hans` / `zh-Hant`；`zh-CN`、`zh-TW` 在当前 Hugo 的 locale 数据中会回退到英文日期。
+
+主题不渲染时间；需要时间格式时，在自定义模板里直接调用 `time.Format`，例如 `time.Format ":time_short"`。

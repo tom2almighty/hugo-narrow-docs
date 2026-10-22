@@ -6,7 +6,7 @@ title: Git 子模块
 
 在开始之前，你需要安装以下软件：
 
-- [Hugo 扩展版](https://gohugo.io/installation/) 且版本大于等于 0.158。
+- [Hugo 扩展版](https://gohugo.io/installation/) 且版本大于等于 0.165。
 - [Git](https://git-scm.com/)
 
 ## 步骤

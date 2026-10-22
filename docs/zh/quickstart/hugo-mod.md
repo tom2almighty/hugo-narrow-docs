@@ -6,7 +6,7 @@ title: Hugo 模块
 
 在开始之前，你需要安装以下软件：
 
-- [Hugo 扩展版](https://gohugo.io/installation/) 且版本大于等于 0.158。
+- [Hugo 扩展版](https://gohugo.io/installation/) 且版本大于等于 0.165。
 - [Git](https://git-scm.com/)
 - [Go](https://go.dev/)
 
@@ -39,7 +39,7 @@ hugo mod get github.com/tom2almighty/hugo-narrow
 module:
   hugoVersion:
     extended: true
-    min: 0.158.0
+    min: 0.165.0
   imports:
     - path: github.com/tom2almighty/hugo-narrow
 ```

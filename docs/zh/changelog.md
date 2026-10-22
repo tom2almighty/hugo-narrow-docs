@@ -2,18 +2,28 @@
 title: "更新日志"
 ---
 
-## v2.0.0 - 2026-10-21
+## v1.4.1 - 2026-10-22
+
+- fix: 移除失效的外观面板 `header.showThemeSwitch` / `showDarkModeSwitch` / `showContentWidthSwitch` 开关。
+- refactor: 语言切换固定为弹出式列表，移除 `showLanguageSwitch` 和 `languageSwitchMode`。
+- refactor: 代码块配色改用 `markup.highlight.style` 的双模式 style，移除 `codeblock.style` / `darkStyle`。
+- ci: Hugo 版本固定在分支 workflow 中，v1 使用 Hugo 0.165.0。
+
+## v2.0.0 - 2026-10-22
 
 - refactor!: 移除顶部导航栏，页面导航改为 Dock，页面位置由上下文栏展示。
 - refactor!: 设计 token 迁移到 shadcn 原始变量名，运行时外观参数与主题色分离。
 - refactor!: 正文改用 `@tailwindcss/typography`，只保留站点特有的标题锚点、代码块和表格覆盖。
 - refactor!: 卡片统一为无封面实现，通过 `post` / `project` / `series` variant 区分元信息。
-- feat: 代码块新增 `style` / `darkStyle`，直接切换 Chroma 亮暗配色。
 - feat: Dock 宽屏右侧竖排、滚动自动收起，窄屏底部常驻，并补回移动端返回顶部和评论入口。
-- feat: 日期格式收敛为 `long` / `short` / `month`，归档月份按语言本地化。
-- refactor!: 配置收敛，移除 `header.*`、`dock`、`timeFormat`、`toc.pinned`、`list.*`、`ui.appearance.*` 等参数；主题注册表移到 `data/themes.yaml`。
+- feat: 外观面板集中配色、亮暗、宽度、模糊、颗粒和语言设置；语言切换改为二级弹出列表。
+- feat: 代码块改用 `markup.highlight.style` 与 `css.ChromaStyles` 生成亮暗两套配色，不再维护 `style` / `darkStyle`。
+- feat: 日期格式收敛为 `long` / `short` / `month`；归档月份通过 `data/dateFormats.yaml` 按语言本地化，支持 CJK、越南语、西班牙语和葡萄牙语。
+- feat: 增加 RTL 基础支持、hreflang、PWA 元数据、打印样式、reduced-transparency/contrast 和 forced-colors 处理。
+- refactor!: 配置收敛，移除 `header.*`、`dock`、`timeFormat`、`toc.position`、`toc.pinned`、`themes` 等参数；配色注册表移到 `data/themes.yaml`。
 - refactor!: 项目移除 `status` front matter，项目卡片不再显示状态。
 - refactor!: 文章版权配置精简为单个标题字符串 `post.license`，并移到文章顶部元信息行；移除链接和独立版权区块。
+- docs: 新增 v1 配置（旧版）页面，说明 v1.4.1 参数和迁移对应关系。
 
 ## v1.3.16 - 2026-09-01
 

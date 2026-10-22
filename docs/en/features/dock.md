@@ -31,3 +31,7 @@ toc: false
 ```
 
 On very wide screens (`>= 105rem` in landscape) the panel shows a pin button. The pin state is stored in the browser; there is no site parameter for it.
+
+## Language switching
+
+On multilingual sites, language selection sits at the bottom of the appearance panel. The panel shows the current language, and clicking it opens a secondary language list. There is no cycle button and no site-level switching-mode parameter. The list uses translations of the current page when available.

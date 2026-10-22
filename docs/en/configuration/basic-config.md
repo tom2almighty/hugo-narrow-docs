@@ -25,8 +25,9 @@ The site configuration is not much different from that of a regular Hugo site; t
 1. `permalinks.projects` sets the permalinks for projects.
 2. `outputFormats.WebAppManifest` automatically generates the `WebAppManifest` configuration for the theme.
 3. `highlight.lineNumbersInTable` needs to be set to `false`.
-4. `highlight.style` does not take effect. Code block colors come from `params.codeblock.style` and `darkStyle`.
+4. Code block colors come from `highlight.style`. The theme generates dark mode from that style's dark counterpart, so choose a paired style such as `catppuccin-latte`, `github`, or `monokai`.
 5. The minimum required version of Hugo is 0.165.0.
+6. When upgrading from 1.x, see [v1 Configuration (Legacy)](/en/configuration/v1-config) for migration notes.
 
 ```yaml
 baseURL: https://hugo-narrow.vercel.app/
@@ -80,7 +81,7 @@ markup:
     lineNos: false
     lineNumbersInTable: false # Set to false
     noClasses: false
-    style: github # ignored; use params.codeblock.style
+    style: catppuccin-latte # must have a dark counterpart
     tabWidth: 2
 
 outputs:
