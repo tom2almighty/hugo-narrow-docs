@@ -82,9 +82,9 @@ title: 扩展短代码
 显示 `~/assets/icons/` 目录下的图标：
 
 ```markdown
-{\{< icon name="heart" >}\}
-{\{< icon name="github" size="lg" >}\}
-{\{< icon name="sun" class="text-primary" >}\}
+{\{< icon name="github" >}\}
+{\{< icon name="palette" size="lg" >}\}
+{\{< icon name="search" class="text-primary" >}\}
 ```
 
 **参数：**

@@ -82,9 +82,9 @@ A missing group, or an entry without `title` / `url`, fails the build instead of
 Display SVG icons from the `~/assets/icons/` directory:
 
 ```markdown
-{\{< icon name="heart" >}\}
-{\{< icon name="github" size="lg" >}\}
-{\{< icon name="sun" class="text-primary" >}\}
+{\{< icon name="github" >}\}
+{\{< icon name="palette" size="lg" >}\}
+{\{< icon name="search" class="text-primary" >}\}
 ```
 
 **Parameters:**
