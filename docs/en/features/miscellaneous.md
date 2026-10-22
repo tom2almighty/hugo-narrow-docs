@@ -12,6 +12,21 @@ readingProgress:
   showOnHomepage: false
 ```
 
+## Announcement
+
+The site-wide announcement is a floating toast. It is dismissible by default, and the dismissed state is kept for the browser session.
+
+```yaml {filename="params.yaml"}
+announcement:
+  enabled: true
+  message: "Site maintenance on Friday."
+  type: info # info | warning | destructive
+  dismissible: true
+  autoClose: 8 # seconds; 0 or omit to keep it visible
+```
+
+`autoClose` only takes effect when it is greater than 0. When the announcement closes automatically, it is marked as dismissed for the current session, the same as clicking the close button.
+
 ## Date localization
 
 The theme uses Hugo's `time.Format`, so dates follow the current language's `locale`. There are only three variants:

@@ -12,6 +12,21 @@ readingProgress:
   showOnHomepage: false
 ```
 
+## 站点通知
+
+站点通知是右上角的浮层提示。默认可关闭，关闭状态在当前浏览器会话内保留。
+
+```yaml {filename="params.yaml"}
+announcement:
+  enabled: true
+  message: "周五站点维护。"
+  type: info # info | warning | destructive
+  dismissible: true
+  autoClose: 8 # 秒；0 或不写表示一直显示
+```
+
+`autoClose` 大于 0 时生效。自动关闭后会在当前会话内记为已关闭，效果与点击关闭按钮一致。
+
 ## 日期本地化
 
 主题使用 Hugo 的 `time.Format`，按当前语言的 `locale` 自动本地化日期。只保留三个变体：
