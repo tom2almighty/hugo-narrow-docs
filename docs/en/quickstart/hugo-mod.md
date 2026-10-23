@@ -28,22 +28,22 @@ cd my-site
 hugo mod init github.com/username/my-site
 
 # add Hugo Narrow
-hugo mod get github.com/tom2almighty/hugo-narrow
+hugo mod get github.com/tom2almighty/hugo-narrow/v2
 ```
 
 ### Copy exampleSite files
 
 Copy the full files of `hugo-narrow/exampleSite/` to the root folder. This method will **NOT** Create any files at `~/themes/`, visit [theme repository](https://github.com/tom2almighty/hugo-narrow/tree/main/exampleSite) see the files.
 
-Modify `hugo-narrow/config/_default/hugo.yaml`, import theme according to hugo mod：
+Modify your site's `config/_default/hugo.yaml`, remove `theme: "hugo-narrow"`, and import theme with hugo mod:
 
-```bash
+```yaml
 module:
   hugoVersion:
     extended: true
     min: 0.165.0
   imports:
-    - path: github.com/tom2almighty/hugo-narrow
+    - path: github.com/tom2almighty/hugo-narrow/v2
 ```
 
 ### Localhost preview
@@ -65,8 +65,10 @@ hugo mod get -u
 To update the theme mod use the command:
 
 ```bash
-hugo mod get -u github.com/tom2almighty/hugo-narrow
+hugo mod get -u github.com/tom2almighty/hugo-narrow/v2
 ```
+
+If you previously used the module path without `/v2`, first change the theme path in `module.imports` to `github.com/tom2almighty/hugo-narrow/v2`, then run the update command above. Run `hugo mod tidy` after updating to remove the old module dependency.
 
 > [!NOTE]
 >
