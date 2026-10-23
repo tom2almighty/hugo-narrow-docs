@@ -28,22 +28,22 @@ cd my-site
 hugo mod init github.com/username/my-site
 
 # 添加 Hugo Narrow 主题
-hugo mod get github.com/tom2almighty/hugo-narrow
+hugo mod get github.com/tom2almighty/hugo-narrow/v2
 ```
 
 ### 复制示例站点配置
 
 将 `hugo-narrow/exampleSite/` 下的内容复制到站点根目录下。这种方式在 `~/themes/` 目录下不会创建文件，访问[主题仓库](https://github.com/tom2almighty/hugo-narrow/tree/main/exampleSite)查看文件。
 
-修改 `hugo-narrow/config/_default/hugo.yaml` 配置文件，通过模块引入主题：
+修改站点的 `config/_default/hugo.yaml` 配置文件，移除 `theme: "hugo-narrow"`，通过模块引入主题：
 
-```bash
+```yaml
 module:
   hugoVersion:
     extended: true
     min: 0.165.0
   imports:
-    - path: github.com/tom2almighty/hugo-narrow
+    - path: github.com/tom2almighty/hugo-narrow/v2
 ```
 
 ### 本地预览
@@ -65,8 +65,10 @@ hugo mod get -u
 更新主题模块使用下面的命令：
 
 ```bash
-hugo mod get -u github.com/tom2almighty/hugo-narrow
+hugo mod get -u github.com/tom2almighty/hugo-narrow/v2
 ```
+
+如果之前使用的是不带 `/v2` 的模块路径，先将配置文件中 `module.imports` 的主题路径改为 `github.com/tom2almighty/hugo-narrow/v2`，再执行上面的更新命令。更新后运行 `hugo mod tidy` 清理旧的模块依赖。
 
 > [!NOTE]
 >
